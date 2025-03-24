@@ -19,7 +19,7 @@ const DirectionsRegistration = () => {
               <div className="">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7443.435069325953!2d79.1329382321892!3d21.123824630147176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c75e15711bbf%3A0x9455d6b5417e150b!2sABAX%20ACADEMY!5e0!3m2!1sen!2sin!4v1742811739745!5m2!1sen!2sin"
-                  width="600"
+                  width="500"
                   height="450"
                   allowFullScreen=""
                   loading="lazy"
