@@ -26,16 +26,16 @@ const DirectionsRegistration = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-
-              <div className="absolute bottom-0 left-0 bg-blue-400 p-4 text-white text-sm w-3/4 rounded-tr-md">
-                <h4 className="font-bold mb-2">Address</h4>
-                <p className="text-xs leading-relaxed">
-                  Plot No. 78, New 5, rev 0, 4, Kharbi Rd, near Hanuman Mandir,
-                  Gadge Baba Nagar, New Sahakar Nagar, Kharbi, Nagpur,
-                  Maharashtra 440024
-                </p>
-              </div>
+            <div className="absolute bottom-0 left-0 bg-blue-400 p-4 text-white text-sm w-3/4 rounded-tr-md">
+              <h4 className="font-bold mb-2">Address</h4>
+              <p className="text-xs leading-relaxed">
+                Plot No. 78, New 5, rev 0, 4, Kharbi Rd, near Hanuman Mandir,
+                Gadge Baba Nagar, New Sahakar Nagar, Kharbi, Nagpur, Maharashtra
+                440024
+              </p>
             </div>
+            </div>
+          
           </div>
 
           <div className="md:w-1/2 md:pl-8">
