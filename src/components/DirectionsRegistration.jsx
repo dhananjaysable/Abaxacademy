@@ -10,7 +10,7 @@ const DirectionsRegistration = () => {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className=" mx-auto">
-        <div className="flex flex-col gap-5 md:flex-row">
+        <div className="flex flex-col gap-10 md:flex-row">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h3 className=" font-semibold mb-6 text-4xl">
               Our <span className="text-4xl ">Directions</span>
