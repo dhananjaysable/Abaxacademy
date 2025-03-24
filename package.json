@@ -1,5 +1,6 @@
 {
-  "name": "abacus",
+  "homepage": "https://dhananjaysable370.github.io/Abaxacademy/",
+  "name": "abaxacademy",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,6 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
