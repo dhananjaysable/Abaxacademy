@@ -85,10 +85,10 @@ const DirectionsRegistration = () => {
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
-              <div>
+              <div className="w-full">
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white py-2 px-6 rounded cursor-pointer w-full sm:w-auto"
+                  className="bg-blue-500 text-white py-2 px-6 rounded cursor-pointer w-full"
                 >
                   Submit
                 </button>
