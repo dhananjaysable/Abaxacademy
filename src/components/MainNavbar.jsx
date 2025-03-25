@@ -9,8 +9,8 @@ const MainNavbar = () => {
   };
 
   return (
-    <nav className="bg-blue-400 text-white">
-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
+    <nav className="bg-blue-400 text-white ">
+      <div className="container mx-auto gap-7 px-4 py-4 w-full flex items-center justify-center">
 
         <button
           className="md:hidden focus:outline-none"
