@@ -4,10 +4,11 @@ import eduactivities from "../assets/edu activities.jpg";
 import selfconfidence from "../assets/selfconfidence.jpg";
 import creativity from "../assets/creativity.jpg";
 import memory from "../assets/memory_carous.jpg";
-import  visualization from '../assets/visualisation.jpg';
-import i2 from '../assets/i2.jpg';
-import i3 from '../assets/i3.jpg';
-import leftbrain from '../assets/leftbrain.jpg';
+import visualization from "../assets/visualisation.jpg";
+import i2 from "../assets/i2.jpg";
+import i3 from "../assets/i3.jpg";
+import leftbrain from "../assets/leftbrain.jpg";
+
 const WhatWeDo = () => {
   const carouselItems = [
     {
@@ -95,33 +96,40 @@ const WhatWeDo = () => {
   };
 
   return (
-    <section
-      className="py-12 bg-cover bg-center text-white"
+    <section 
+      className="relative w-full min-h-[500px] bg-cover bg-center text-white flex items-center justify-center"
       style={{ backgroundImage: `url(${library})` }}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 w-full">
         <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-16">What We Do</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-8 text-white">
+            What We Do
+          </h3>
 
-          <div className="relative max-w-3xl mx-auto">
-         
-            <div className="overflow-hidden rounded-lg">
+          <div className="relative w-full max-w-4xl mx-auto">
+            {/* Carousel Container */}
+            <div className="overflow-hidden rounded-lg shadow-lg ">
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className="flex transition-transform duration-500 ease-in-out items-center justify-center"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
                 {carouselItems.map((item) => (
-                  <div key={item.id} className="min-w-full flex-shrink-0 p-4">
-                    <div className="mb-8">
+                  <div
+                    key={item.id}
+                    className="min-w-full flex-shrink-0 p-4 md:p-8 flex flex-col items-center bg-white text-black justify-center text-center "
+                  >
+                    <div className="mb-4 md:mb-6">
                       <img
                         src={item.image}
-                        alt="Educational activities"
-                        className="mx-auto rounded-full bg-yellow-100 p-2 mb-4 w-56 h-56 object-cover"
+                        alt={item.title}
+                        className="mx-auto rounded-full bg-yellow-100 p-2 w-32 h-32 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover shadow-md flex items-center justify-center"
                       />
                     </div>
 
-                    <h4 className="text-xl mb-2">{item.title}</h4>
-                    <p className="text-sm max-w-2xl mx-auto">
+                    <h4 className="text-lg flex items-center justify-center md:text-2xl mb-2 font-semibold text-white">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm flex items-center justify-center md:text-base max-w-xs md:max-w-md mx-auto text-white">
                       {item.description}
                     </p>
                   </div>
@@ -129,26 +137,36 @@ const WhatWeDo = () => {
               </div>
             </div>
 
+            {/* Navigation Buttons */}
             <button
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-md focus:outline-none"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 
+                         bg-black bg-opacity-50 hover:bg-opacity-75 
+                         text-white p-2 md:p-4 rounded-r-md 
+                         focus:outline-none z-10"
               onClick={goToPrevious}
             >
-              &#10094;
+              <span className="text-xl md:text-3xl">&lt;</span>
             </button>
 
             <button
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l-md focus:outline-none"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 
+                         bg-black bg-opacity-50 hover:bg-opacity-75 
+                         text-white p-2 md:p-4 rounded-l-md 
+                         focus:outline-none z-10"
               onClick={goToNext}
             >
-              &#10095;
+              <span className="text-xl md:text-3xl">&gt;</span>
             </button>
 
-            <div className="flex justify-center mt-4 space-x-2">
+            {/* Dots Navigation */}
+            <div className="flex justify-center mt-4 md:mt-6 space-x-2">
               {carouselItems.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full focus:outline-none ${
-                    index === currentIndex ? "bg-white" : "bg-gray-400"
+                  className={`w-2 h-2 md:w-3 md:h-3 rounded-full focus:outline-none transition-colors duration-300 ${
+                    index === currentIndex 
+                      ? "bg-white scale-125" 
+                      : "bg-gray-400 hover:bg-gray-300"
                   }`}
                   onClick={() => goToSlide(index)}
                 />
