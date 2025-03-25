@@ -20,7 +20,7 @@ const Welcome = () => {
               ABAX ACADEMY Started in 2009, An ISO 9001:2015 certified company a unit of A.A Academy, is continuously growing in the market. We are manufacturers, supplier and exporter of Abacus and other related products like Kit Tool Box, T-Shirt, Training Books & abacus Study Material. Also we are the leading service provider of Training and Franchise and Montessori Teacher training.
             </p>
             <div className="flex justify-center md:justify-start">
-              <button className="bg-blue-400 text-white px-4 py-1 rounded hover:bg-blue-500">
+              <button className="bg-blue-400 text-white px-4 py-1 rounded hover:bg-blue-500 cursor-pointer transition duration-300">
                 Read more
               </button>
             </div>
