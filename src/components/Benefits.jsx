@@ -16,7 +16,7 @@ const Benefits = () => {
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-center">
   
         <div className="lg:w-1/2 mb-8 lg:mb-0 px-4">
           <h3 className="text-2xl font-semibold mb-6 text-center lg:text-left">
@@ -33,7 +33,7 @@ const Benefits = () => {
         </div>
 
         <div
-          className="lg:w-1/2 flex justify-center items-center px-4 h-full"
+          className="lg:w-1/2 flex justify-center items-center px-4"
           style={{
             backgroundImage: `url(${benefitsImage})`,
             backgroundSize: "cover",
@@ -44,19 +44,19 @@ const Benefits = () => {
           }}
         >
           <div className="flex items-center justify-center gap-8 flex-wrap text-center text-4xl p-4 rounded-lg">
-            <div className="flex flex-col items-center lg:items-start justify-center gap-2">
+            <div className="flex flex-col items-center justify-center gap-2">
               <h1 className="text-blue-400 font-bold">600+</h1>
               <span className="font-semibold text-lg tracking-widest">
                 Teachers
               </span>
             </div>
-            <div className="flex flex-col items-center lg:items-start justify-center gap-2">
+            <div className="flex flex-col items-center justify-center gap-2">
               <h1 className="text-blue-400 font-bold">2Lakh+</h1>
               <span className="font-semibold text-lg tracking-widest">
                 Students
               </span>
             </div>
-            <div className="flex flex-col items-center lg:items-start justify-center gap-2">
+            <div className="flex flex-col items-center justify-center gap-2">
               <h1 className="text-blue-400 font-bold">80+</h1>
               <span className="font-semibold text-lg tracking-widest">
                 Courses
