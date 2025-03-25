@@ -107,7 +107,7 @@ const WhatWeDo = () => {
           </h3>
 
           <div className="relative max-w-4xl mx-auto">
-            {/* Carousel Items */}
+        
             <div className="overflow-hidden rounded-lg">
               <div
                 className="flex transition-transform duration-500 ease-in-out"
@@ -135,7 +135,6 @@ const WhatWeDo = () => {
               </div>
             </div>
 
-            {/* Navigation Buttons */}
             <button
               className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-md focus:outline-none"
               onClick={goToPrevious}
@@ -150,7 +149,6 @@ const WhatWeDo = () => {
               &#10095;
             </button>
 
-            {/* Dots Navigation */}
             <div className="flex justify-center mt-4 space-x-2">
               {carouselItems.map((_, index) => (
                 <button
