@@ -10,7 +10,8 @@ const MainNavbar = () => {
 
   return (
     <nav className="bg-blue-400 text-white">
-      <div className="container mx-auto flex items-center justify-center px-4 py-4">
+      <div className="container mx-auto flex items-center justify-between px-4 py-4">
+
         <button
           className="md:hidden focus:outline-none"
           onClick={toggleMenu}
@@ -20,16 +21,9 @@ const MainNavbar = () => {
         </button>
 
         <div
-          className={`
-            ${isOpen ? "flex" : "hidden"} 
-            md:flex flex-col md:flex-row
-            absolute md:relative top-16 md:top-0 left-0 right-0
-            bg-blue-500 md:bg-transparent
-            shadow-lg md:shadow-none
-            py-4 md:py-0 px-4 md:px-0
-            z-20
-            md:items-center space-y-3 md:space-y-0 md:space-x-6
-          `}
+          className={`${
+            isOpen ? "block" : "hidden"
+          } md:flex flex-col md:flex-row absolute md:relative top-16 md:top-0 left-0 right-0 bg-blue-500 md:bg-transparent shadow-lg md:shadow-none py-4 md:py-0 px-4 md:px-0 z-20 md:items-center space-y-3 md:space-y-0 md:space-x-6`}
         >
           <a
             href="#"
