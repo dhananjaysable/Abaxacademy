@@ -11,7 +11,6 @@ const DirectionsRegistration = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col gap-10 md:flex-row">
-          {/* Directions Section */}
           <div className="md:w-1/2 mb-8 md:mb-0">
             <h3 className="font-semibold mb-6 text-3xl md:text-4xl">
               Our <span className="text-4xl">Directions</span>
@@ -39,7 +38,6 @@ const DirectionsRegistration = () => {
             </div>
           </div>
 
-          {/* Registration Form Section */}
           <div className="md:w-1/2 md:pl-8">
             <h3 className="text-3xl md:text-4xl font-semibold mb-6">
               Registration <span className="font-normal">Form</span>
@@ -96,7 +94,6 @@ const DirectionsRegistration = () => {
                 </button>
               </div>
 
-              {/* Contact Information */}
               <div className="mt-8 text-lg space-y-4">
                 <div className="flex items-center space-x-4">
                   <TbLocationFilled className="text-teal-500 w-6 h-6" />
