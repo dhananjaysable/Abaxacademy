@@ -1,1 +1,1 @@
-[Check it out](https://dhananjaysable370.github.io/Abaxacademy/)
+[Check it out](https://dhananjaysable.github.io/Abaxacademy/)
