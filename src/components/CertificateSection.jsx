@@ -27,9 +27,11 @@ const CertificateSection = () => {
               key={item}
               className="border border-red-200 rounded p-2 shadow-sm flex justify-center hover:shadow-md transition-shadow"
             >
+              {/* ⚡ Bolt: Added lazy loading to off-screen certificate images. Impact: Reduces initial load time and network bandwidth. */}
               <img
                 src={certificates[item - 1]}
                 alt={`Certificate sample ${item}`}
+                loading="lazy"
                 className="h-48 w-full object-contain"
               />
             </div>
