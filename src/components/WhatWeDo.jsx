@@ -136,14 +136,16 @@ const WhatWeDo = () => {
             </div>
 
             <button
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-md focus:outline-none"
+              aria-label="Previous slide"
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               onClick={goToPrevious}
             >
               &#10094;
             </button>
 
             <button
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l-md focus:outline-none"
+              aria-label="Next slide"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-l-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               onClick={goToNext}
             >
               &#10095;
@@ -153,7 +155,9 @@ const WhatWeDo = () => {
               {carouselItems.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full focus:outline-none ${
+                  aria-label={`Go to slide ${index + 1}`}
+                  aria-current={index === currentIndex ? "true" : undefined}
+                  className={`w-3 h-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent ${
                     index === currentIndex ? "bg-white" : "bg-gray-400"
                   }`}
                   onClick={() => goToSlide(index)}
