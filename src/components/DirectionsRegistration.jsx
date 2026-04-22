@@ -43,11 +43,19 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form
+              className="space-y-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                // Security: Prevent default submission to avoid URL parameter info leakage
+              }}
+            >
               <div>
                 <input
                   type="text"
                   placeholder="Name"
+                  required
+                  maxLength={100}
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
@@ -55,6 +63,8 @@ const DirectionsRegistration = () => {
                 <input
                   type="email"
                   placeholder="Email"
+                  required
+                  maxLength={100}
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
@@ -62,16 +72,20 @@ const DirectionsRegistration = () => {
                 <input
                   type="text"
                   placeholder="City"
+                  required
+                  maxLength={100}
                   className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
                 />
                 <input
                   type="text"
                   placeholder="State"
+                  required
+                  maxLength={100}
                   className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
               <div>
-                <select className="w-full p-2 rounded text-gray-800 bg-gray-100">
+                <select required className="w-full p-2 rounded text-gray-800 bg-gray-100">
                   <option value="">Status</option>
                   <option value="student">Student</option>
                   <option value="parent">Parent</option>
@@ -80,8 +94,11 @@ const DirectionsRegistration = () => {
               </div>
               <div>
                 <input
-                  type="text"
+                  type="tel"
                   placeholder="Mobile No"
+                  required
+                  pattern="[0-9]{10}"
+                  maxLength={10}
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
