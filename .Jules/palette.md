@@ -1,0 +1,3 @@
+## 2025-02-23 - Interactive Click Target Mismatch and ARIA Labels
+**Learning:** Found an app-specific pattern where icon-only buttons (e.g. social links in Header) wrapped `<button>` elements in padded `<div>` containers. The hover effect was applied to the outer `<div>` and the cursor pointer to both, causing the visual hover area to not match the actual interactive element size. Also, these buttons lacked ARIA labels for accessibility.
+**Action:** Always ensure hover states and padding are on the interactive element (`<a>` or `<button>`) itself rather than wrapper divs. Verify that icon-only buttons use descriptive `aria-label`s and clear visual focus rings (`focus-visible:ring-2`) for keyboard accessibility.
