@@ -31,6 +31,7 @@ const Welcome = () => {
             <img
               src={sideImg}
               alt="Student learning"
+              loading="lazy"
               className="rounded-lg shadow-md w-full h-64 object-cover"
             />
           </div>

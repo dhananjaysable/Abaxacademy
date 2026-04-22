@@ -41,6 +41,7 @@ const CourseSection = () => {
                 <img
                   src={courseImages[index]}
                   alt={course.name}
+                  loading="lazy"
                   className="w-full h-32 object-cover rounded-md"
                 />
               </div>
