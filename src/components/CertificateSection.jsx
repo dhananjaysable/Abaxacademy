@@ -30,6 +30,7 @@ const CertificateSection = () => {
               <img
                 src={certificates[item - 1]}
                 alt={`Certificate sample ${item}`}
+                loading="lazy"
                 className="h-48 w-full object-contain"
               />
             </div>
