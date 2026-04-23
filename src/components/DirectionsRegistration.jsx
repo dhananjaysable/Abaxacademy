@@ -43,7 +43,14 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            {/* SECURITY: Prevent default GET submission to avoid leaking PII (Name, Email, Mobile No) in URL parameters */}
+            <form
+              className="space-y-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                // Handle actual submission logic here securely
+              }}
+            >
               <div>
                 <input
                   type="text"
