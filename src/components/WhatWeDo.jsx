@@ -119,9 +119,11 @@ const WhatWeDo = () => {
                     className="min-w-full flex-shrink-0 p-4 sm:p-6 flex flex-col items-center justify-center text-center"
                   >
                     <div className="mb-6 sm:mb-8">
+                      {/* ⚡ Bolt Optimization: Lazy load off-screen carousel images to improve initial page load performance, especially for large assets (>12MB) */}
                       <img
                         src={item.image}
                         alt={item.title}
+                        loading="lazy"
                         className="mx-auto rounded-full bg-yellow-100 p-2 mb-4 w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 object-cover"
                       />
                     </div>

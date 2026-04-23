@@ -38,9 +38,11 @@ const CourseSection = () => {
               className="text-center cursor-pointer bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition duration-300"
             >
               <div className="mb-4">
+                {/* ⚡ Bolt Optimization: Lazy load off-screen course images to improve initial payload size */}
                 <img
                   src={courseImages[index]}
                   alt={course.name}
+                  loading="lazy"
                   className="w-full h-32 object-cover rounded-md"
                 />
               </div>
