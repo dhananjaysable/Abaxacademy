@@ -43,35 +43,47 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <input
                   type="text"
+                  aria-label="Name"
                   placeholder="Name"
-                  className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow"
                 />
               </div>
               <div>
                 <input
                   type="email"
+                  aria-label="Email"
                   placeholder="Email"
-                  className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow"
                 />
               </div>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
                 <input
                   type="text"
+                  aria-label="City"
                   placeholder="City"
-                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow"
                 />
                 <input
                   type="text"
+                  aria-label="State"
                   placeholder="State"
-                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow"
                 />
               </div>
               <div>
-                <select className="w-full p-2 rounded text-gray-800 bg-gray-100">
+                <select
+                  aria-label="Status"
+                  required
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow"
+                >
                   <option value="">Status</option>
                   <option value="student">Student</option>
                   <option value="parent">Parent</option>
@@ -80,15 +92,17 @@ const DirectionsRegistration = () => {
               </div>
               <div>
                 <input
-                  type="text"
+                  type="tel"
+                  aria-label="Mobile Number"
                   placeholder="Mobile No"
-                  className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-shadow"
                 />
               </div>
               <div className="w-full">
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white py-2 px-6 rounded cursor-pointer w-full"
+                  className="bg-blue-500 text-white py-2 px-6 rounded cursor-pointer w-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-700 transition-all"
                 >
                   Submit
                 </button>
