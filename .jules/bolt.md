@@ -1,0 +1,3 @@
+## 2024-04-24 - Massive Unoptimized Image Assets
+**Learning:** The `src/assets` directory contains massive, unoptimized high-resolution images (some exceeding 12MB). This is a critical codebase-specific performance bottleneck as these assets are loaded unconditionally, severely impacting initial page load time and bandwidth usage.
+**Action:** Always verify if images are above or below the fold. For below-the-fold images, specifically in carousels (`WhatWeDo.jsx`) and extensive grid listings (`CourseSection.jsx`, `CertificateSection.jsx`), add `loading="lazy"` to defer loading until they are about to enter the viewport.

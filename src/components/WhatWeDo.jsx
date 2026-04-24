@@ -119,10 +119,15 @@ const WhatWeDo = () => {
                     className="min-w-full flex-shrink-0 p-4 sm:p-6 flex flex-col items-center justify-center text-center"
                   >
                     <div className="mb-6 sm:mb-8">
+                      {/* ⚡ Bolt Performance Optimization:
+                          Added loading="lazy" to carousel images. Since some assets in src/assets
+                          are very large (>12MB), lazy loading these below-the-fold images
+                          significantly improves initial page load time and reduces initial payload size. */}
                       <img
                         src={item.image}
                         alt={item.title}
                         className="mx-auto rounded-full bg-yellow-100 p-2 mb-4 w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 object-cover"
+                        loading="lazy"
                       />
                     </div>
 
