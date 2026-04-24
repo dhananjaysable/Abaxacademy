@@ -43,11 +43,12 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <input
                   type="text"
                   placeholder="Name"
+                  aria-label="Name"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
@@ -55,6 +56,7 @@ const DirectionsRegistration = () => {
                 <input
                   type="email"
                   placeholder="Email"
+                  aria-label="Email"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
@@ -62,16 +64,18 @@ const DirectionsRegistration = () => {
                 <input
                   type="text"
                   placeholder="City"
+                  aria-label="City"
                   className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
                 />
                 <input
                   type="text"
                   placeholder="State"
+                  aria-label="State"
                   className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
               <div>
-                <select className="w-full p-2 rounded text-gray-800 bg-gray-100">
+                <select aria-label="Status" className="w-full p-2 rounded text-gray-800 bg-gray-100">
                   <option value="">Status</option>
                   <option value="student">Student</option>
                   <option value="parent">Parent</option>
@@ -82,6 +86,7 @@ const DirectionsRegistration = () => {
                 <input
                   type="text"
                   placeholder="Mobile No"
+                  aria-label="Mobile No"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
