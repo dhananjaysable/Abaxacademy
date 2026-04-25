@@ -28,9 +28,11 @@ const Welcome = () => {
 
           {/* Image Section */}
           <div className="md:w-1/2">
+            {/* ⚡ Bolt: Added loading="lazy" to the Welcome section image as it's likely further down the page and its deferral will aid initial load performance. */}
             <img
               src={sideImg}
               alt="Student learning"
+              loading="lazy"
               className="rounded-lg shadow-md w-full h-64 object-cover"
             />
           </div>

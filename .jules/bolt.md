@@ -1,0 +1,3 @@
+## 2024-05-24 - High-Res Image Assets in Assets Directory
+**Learning:** The `src/assets` directory contains several high-resolution, unoptimized images (e.g. `memory_carous.jpg` is 13MB, `creativity.jpg` is 7.6MB, `visualisation.jpg` is 9.1MB). Loading these unoptimized images, especially in a carousel that renders them off-screen initially, drastically increases the initial payload and blocks rendering.
+**Action:** Implement lazy loading (`loading="lazy"`) on images that are rendered below the fold or inside carousels, specifically the images in `WhatWeDo.jsx`, to avoid fetching them all upfront and speed up the initial page load. Long-term, images should be optimized during the build process or manually compressed.
