@@ -13,22 +13,22 @@ const Header = () => {
 
       <div className="flex space-x-3">
         <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
+          <button aria-label="Facebook">
             <FaFacebook className="w-6 h-6 cursor-pointer" />
           </button>
         </div>
         <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
+          <button aria-label="Twitter">
             <BsTwitter className="cursor-pointer w-6 h-6" />
           </button>
         </div>
         <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
+          <button aria-label="Instagram">
             <BsInstagram className="w-6 h-6 cursor-pointer" />
           </button>
         </div>
         <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
+          <button aria-label="LinkedIn">
             <LiaLinkedinIn className="w-7 h-7 text-white fill-current cursor-pointer" />
           </button>
         </div>

@@ -1,0 +1,3 @@
+## 2025-05-18 - Missing ARIA Labels on Icon-only Buttons
+**Learning:** Found an accessibility issue pattern in the `Header.jsx` component where icon-only buttons for social media links lacked `aria-label` attributes. This is a common pattern that makes navigation difficult for screen reader users, who will just hear "button" without context.
+**Action:** Added explicit `aria-label` attributes (e.g., `aria-label="Facebook"`) to these buttons to maintain the visual design while adhering to accessibility standards. Next time, always check for missing `aria-label`s on icon-only interactive elements across the application.
