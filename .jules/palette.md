@@ -1,0 +1,3 @@
+## 2025-03-05 - Accessibility & Focus States in Abax Academy Forms
+**Learning:** The project relies heavily on placeholder text instead of visible `<label>` elements for inputs, which causes screen readers to have poor context. Default form submissions in React without `e.preventDefault()` can leak PII into the URL as GET parameters and cause unintended page reloads.
+**Action:** When creating or updating form fields, always add `aria-label` attributes to compensate for missing visual labels, implement distinct focus styles (e.g. `focus:outline-none focus:ring-2 focus:ring-blue-400`), and ensure `<form>` tags intercept `onSubmit` events to prevent default behavior.
