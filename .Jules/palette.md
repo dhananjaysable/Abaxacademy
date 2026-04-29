@@ -1,0 +1,3 @@
+## 2025-05-18 - Missing ARIA Labels on Icon-Only Buttons
+**Learning:** Found that social media links in the header use icon-only buttons (`<button><Icon /></button>`) without explicit text labels or standard keyboard focus indicators, which degrades screen reader compatibility and keyboard accessibility.
+**Action:** Always add descriptive `aria-label` attributes to icon-only interactive elements and ensure clear focus indicators using classes like `focus-visible:ring-2 focus-visible:ring-blue-500 focus:outline-none`.
