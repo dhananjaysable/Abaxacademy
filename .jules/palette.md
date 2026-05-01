@@ -1,0 +1,3 @@
+## 2024-05-24 - Form Accessibility and UX Patterns
+**Learning:** Found a pattern where form inputs were relying solely on `placeholder` attributes without `aria-label` or explicit `<label>` tags, making them inaccessible to screen readers. Additionally, forms lacked `onSubmit` handling with `e.preventDefault()`, which could lead to unwanted page reloads, and form fields lacked visible focus indicators for keyboard navigation.
+**Action:** When working with forms in this app, ensure all inputs have explicit `aria-label` attributes if visible labels are omitted. Always implement `e.preventDefault()` on form submission to prevent default behavior, and add clear focus states (`focus:ring-2 focus:outline-none`) to all interactive elements for keyboard accessibility.
