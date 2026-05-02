@@ -1,0 +1,4 @@
+## 2024-06-25 - React Form PII Leak & Iframe Sandboxing
+**Vulnerability:** PII (Name, Email, Mobile No) leaked in URL parameters due to default `<form>` GET submission behavior in React, and lack of sandboxing on third-party Google Maps `<iframe>`.
+**Learning:** React forms without explicit `onSubmit` handlers calling `e.preventDefault()` will perform a standard browser GET request on submit, appending all named input fields to the URL. This is a critical risk for forms handling PII. Additionally, third-party iframe embeds should always be restricted.
+**Prevention:** Always add `onSubmit={(e) => e.preventDefault()}` to React `<form>` elements when handling submissions client-side, especially when dealing with PII. For iframes, add `sandbox="allow-scripts allow-same-origin"` to restrict potentially harmful behaviors while maintaining functionality.
