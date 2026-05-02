@@ -5,15 +5,18 @@ import certificate4 from "../assets/Certificate3.jpg";
 import certificate5 from "../assets/Certificate4.jpg";
 import certificate6 from "../assets/udyam registration.png";
 
+// Performance optimization: Hoist static configuration array outside component
+// This prevents recreation on every render, reducing garbage collection overhead.
+const CERTIFICATES = [
+  certificate1,
+  certificate2,
+  certificate3,
+  certificate4,
+  certificate5,
+  certificate6,
+];
+
 const CertificateSection = () => {
-  const certificates = [
-    certificate1,
-    certificate2,
-    certificate3,
-    certificate4,
-    certificate5,
-    certificate6,
-  ];
   return (
     <section className="py-12 px-6">
       <div className="container mx-auto">
@@ -28,7 +31,7 @@ const CertificateSection = () => {
               className="border border-red-200 rounded p-2 shadow-sm flex justify-center hover:shadow-md transition-shadow"
             >
               <img
-                src={certificates[item - 1]}
+                src={CERTIFICATES[item - 1]}
                 alt={`Certificate sample ${item}`}
                 className="h-48 w-full object-contain"
               />
