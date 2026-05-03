@@ -1,0 +1,4 @@
+## 2024-05-03 - [Security Harden Forms & Embeds]
+**Vulnerability:** Default form submissions in React can leak PII via URL parameters. Additionally, permissive third-party iframe embeds without a sandbox attribute pose a security risk, and missing reverse tabnabbing protection can lead to phishing.
+**Learning:** React requires explicit `e.preventDefault()` on form submissions to avoid default GET behavior. Third-party embeds like Google Maps must be sandboxed using the `sandbox` attribute (`allow-scripts allow-same-origin`) to restrict their capabilities. `react/jsx-no-target-blank` must be enabled to prevent reverse tabnabbing.
+**Prevention:** Always add `onSubmit={(e) => e.preventDefault()}` to forms. Apply `sandbox` attributes to all `<iframe>` elements to strictly define permissions. Keep `react/jsx-no-target-blank` set to `error` in `eslint.config.js`.
