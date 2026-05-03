@@ -1,0 +1,3 @@
+## 2024-05-18 - Prevent unnecessary garbage collection in components with periodic state updates
+**Learning:** Defining static arrays inside React components that have periodic state updates (like `setInterval` triggering `setState` every few seconds) causes the array to be recreated on every single render, leading to continuous and unnecessary garbage collection overhead. This is a common performance anti-pattern.
+**Action:** Always move static configuration arrays and constant objects outside of the component definition, especially when the component frequently re-renders due to intervals, animations, or subscriptions. Follow the uppercase naming convention (e.g., `CAROUSEL_ITEMS`) for these external constants to indicate they are static.
