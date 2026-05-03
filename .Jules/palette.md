@@ -1,0 +1,3 @@
+## 2024-05-03 - Form Placeholder Accessibility
+**Learning:** The project`s UI components frequently use placeholder text in lieu of visible `<label>` elements. While visually clean, this significantly impairs accessibility for screen readers and removes visible context once a user starts typing.
+**Action:** When working on forms in this application, always explicitly add `aria-label` attributes to inputs and `select` elements to ensure screen readers provide context. Furthermore, as interactive elements often lack clear focus indicators, append keyboard accessibility classes (e.g., `focus:ring-2 focus:ring-blue-500 focus:outline-none`) to maintain a robust, usable experience.
