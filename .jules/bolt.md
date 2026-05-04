@@ -1,0 +1,3 @@
+## 2026-05-04 - Extracting static arrays in components with periodic updates
+**Learning:** Components with periodic state updates (e.g., `setInterval`) that contain static arrays or configuration objects inside their definition cause these static objects to be unnecessarily re-created on every render, adding garbage collection overhead.
+**Action:** Always extract static arrays and constant objects outside the component definition, especially for components that re-render frequently due to intervals or animations. Use uppercase naming convention (e.g., `CAROUSEL_ITEMS`) to indicate they are static constants.
