@@ -24,6 +24,7 @@ const DirectionsRegistration = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  sandbox="allow-scripts allow-same-origin allow-popups"
                   className="rounded-lg"
                 ></iframe>
               </div>
@@ -43,7 +44,13 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form
+              className="space-y-4"
+              onSubmit={(e) => {
+                // Prevent default form GET submission which leaks PII in URL parameters
+                e.preventDefault();
+              }}
+            >
               <div>
                 <input
                   type="text"

@@ -1,0 +1,4 @@
+## 2024-05-04 - [PII Leakage and Iframe Hardening]
+**Vulnerability:** Forms in React were missing `e.preventDefault()`, which causes a default GET submission leaking form inputs (PII) into the URL parameters. Also, an external iframe for Google Maps was lacking a `sandbox` attribute.
+**Learning:** Default form submissions in React without explicit `preventDefault` can unexpectedly expose sensitive data. External map embeds from third parties should always restrict capabilities via the `sandbox` attribute for security hardening.
+**Prevention:** Always add `e.preventDefault()` inside form `onSubmit` handlers. Apply `sandbox="allow-scripts allow-same-origin allow-popups"` to map iframes to enforce least-privilege policies.
