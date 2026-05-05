@@ -4,6 +4,12 @@ import { TbAirConditioning, TbLocationFilled } from "react-icons/tb";
 import { MdEmail } from "react-icons/md";
 
 const DirectionsRegistration = () => {
+  // Prevent default form submission which could leak PII in URL params
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Form submission logic would go here
+  };
+
   return (
     <section
       className="py-12 px-6 bg-gray-700 text-white bg-cover bg-center bg-no-repeat"
@@ -24,6 +30,7 @@ const DirectionsRegistration = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  sandbox="allow-scripts allow-same-origin allow-popups"
                   className="rounded-lg"
                 ></iframe>
               </div>
@@ -43,7 +50,7 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <input
                   type="text"
