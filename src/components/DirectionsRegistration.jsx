@@ -43,31 +43,35 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  aria-label="Name"
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  aria-label="Email"
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
                 <input
                   type="text"
                   placeholder="City"
-                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
+                  aria-label="City"
+                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <input
                   type="text"
                   placeholder="State"
-                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
+                  aria-label="State"
+                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
@@ -88,7 +92,7 @@ const DirectionsRegistration = () => {
               <div className="w-full">
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white py-2 px-6 rounded cursor-pointer w-full"
+                  className="bg-blue-500 text-white py-2 px-6 rounded cursor-pointer w-full focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-700"
                 >
                   Submit
                 </button>
