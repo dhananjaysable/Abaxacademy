@@ -17,6 +17,7 @@ const DirectionsRegistration = () => {
             </h3>
             <div className="relative">
               <div className="w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px]">
+                {/* Security: sandbox attributes restrict third-party embed capabilities while allowing necessary map functions */}
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7443.435069325953!2d79.1329382321892!3d21.123824630147176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c75e15711bbf%3A0x9455d6b5417e150b!2sABAX%20ACADEMY!5e0!3m2!1sen!2sin!4v1742811739745!5m2!1sen!2sin"
                   width="100%"
@@ -24,6 +25,7 @@ const DirectionsRegistration = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
+                  sandbox="allow-scripts allow-same-origin allow-popups"
                   className="rounded-lg"
                 ></iframe>
               </div>
@@ -43,7 +45,11 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            {/* Security: Prevent default form submission to avoid leaking PII via GET parameters in URL */}
+            <form
+              className="space-y-4"
+              onSubmit={(e) => e.preventDefault()}
+            >
               <div>
                 <input
                   type="text"
