@@ -1,0 +1,3 @@
+## 2024-05-08 - Accessible Forms
+**Learning:** Found an accessibility issue pattern specific to this app's components where inputs and select elements were relying solely on placeholders without any `aria-label` attributes or visible focus states for keyboard navigation.
+**Action:** Always ensure `aria-label` attributes and focus-visible classes (`focus:ring-2 focus:ring-blue-500 focus:outline-none`) are included when creating or modifying form inputs in this app to ensure they are accessible to both screen readers and keyboard users.
