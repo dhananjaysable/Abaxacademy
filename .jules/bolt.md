@@ -1,0 +1,3 @@
+## 2025-05-08 - [Static Array Garbage Collection Overhead in Periodic State Updates]
+**Learning:** React components containing both static arrays (e.g., carousel items) and periodic state updates (like `setInterval`) recreate the static array on every single re-render, leading to unnecessary memory allocation and garbage collection overhead.
+**Action:** Always extract static configuration objects and arrays outside of the React component definition when possible, especially in components that re-render frequently due to time-based state updates.
