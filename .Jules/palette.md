@@ -1,0 +1,3 @@
+## 2024-05-09 - Missing Accessible Labels and Focus States on Icon Buttons
+**Learning:** In components like `Header.jsx`, icon-only buttons rely on nested visual elements without accessible names, and interactive styles (hover states) are placed on non-interactive `<div>` wrappers instead of the `<button>` itself, breaking native keyboard navigation focus rings.
+**Action:** When working with icon-only buttons, always place interactive states (hover/focus) directly on the `<button>`, add explicit `aria-label` attributes, and ensure `focus-visible` styles are implemented to maintain keyboard navigation accessibility.
