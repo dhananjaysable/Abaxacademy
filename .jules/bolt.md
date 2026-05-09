@@ -1,0 +1,3 @@
+## 2024-05-09 - [Prevent static array reallocation in frequently updated components]
+**Learning:** Found an architectural pattern where components that frequently re-render (like `WhatWeDo.jsx` with a 5000ms `setInterval`) define static data arrays within the functional component's body. This causes unnecessary array memory allocation and subsequent garbage collection overhead on every re-render.
+**Action:** When working on performance optimizations, specifically look for static definition arrays (like carousel data or lists) inside functional components that re-render frequently. Move these definitions outside the component body as constants (using uppercase convention, e.g. `CAROUSEL_ITEMS`) to significantly reduce memory turnover.
