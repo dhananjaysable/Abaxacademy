@@ -23,6 +23,7 @@ const DirectionsRegistration = () => {
                   height="100%"
                   allowFullScreen=""
                   loading="lazy"
+                  sandbox="allow-scripts allow-same-origin allow-popups"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-lg"
                 ></iframe>
@@ -43,7 +44,13 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form
+              className="space-y-4"
+              onSubmit={(e) => {
+                e.preventDefault();
+                // TODO: Implement actual form submission logic securely
+              }}
+            >
               <div>
                 <input
                   type="text"
