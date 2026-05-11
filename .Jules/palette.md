@@ -1,0 +1,3 @@
+## 2024-05-11 - Icon-Only Button Wrappers and ARIA
+**Learning:** In this application, interactive styles (like `hover:bg` or `padding`) are sometimes applied to parent `<div>` elements surrounding icon-only buttons instead of the semantic `<button>` itself, which causes spacing issues when trying to add proper focus rings for keyboard users.
+**Action:** When adding ARIA labels and focus styles to icon-only buttons, check the parent elements. If the parent acts merely as a visual target area, move its sizing and hover classes directly onto the `<button>` element to ensure the focus ring aligns correctly with the visual interaction area.
