@@ -1,0 +1,4 @@
+## 2025-05-11 - [PII Leakage & Embedded Content Security]
+**Vulnerability:** Forms lacking an `onSubmit` handler default to GET submissions, exposing Personal Identifiable Information (PII) like names and emails in URL parameters. Additionally, third-party iframe embeds (e.g., Google Maps) lacked strict sandboxing.
+**Learning:** Default browser behaviors in React components can inadvertently leak sensitive user data if not explicitly controlled with `e.preventDefault()`. Unrestricted iframes pose a risk of executing malicious scripts or unauthorized pop-ups.
+**Prevention:** Always implement `e.preventDefault()` on form submissions to prevent accidental GET requests, particularly when handling PII. Secure third-party embeds by consistently applying `sandbox="allow-scripts allow-same-origin allow-popups"` to restrict behaviors while maintaining functionality.
