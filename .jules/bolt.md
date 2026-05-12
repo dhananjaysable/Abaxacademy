@@ -1,0 +1,3 @@
+## 2025-05-12 - Prevent Reallocation of Large Static Arrays in Render/Interval Cycles
+**Learning:** Found multiple instances where large arrays (like carousel configurations or course lists) were defined inside functional components, causing unnecessary recreation and garbage collection overhead on every render, especially noticeable in components with frequent state updates like `setInterval` in `WhatWeDo.jsx`.
+**Action:** Always define static arrays and constant configuration objects outside of the component definition. Capitalize the names of these constants (e.g., `CAROUSEL_ITEMS`) to clearly indicate they are immutable globals.
