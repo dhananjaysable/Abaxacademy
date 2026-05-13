@@ -1,0 +1,3 @@
+## 2025-05-13 - [Semantic HTML for Interactive Elements]
+**Learning:** Found a recurring pattern where interactive styles (hover effects, cursor styling, etc.) are applied to a non-interactive `<div>` wrapper instead of the actual `<button>` element inside it, rendering the element inaccessible for keyboard navigation and confusing for screen readers due to missing `aria-label`s on icon-only buttons.
+**Action:** Always move interactive styles directly to the semantic `<button>`, add clear `aria-label` attributes for icon-only buttons, and provide explicit focus states (e.g., `focus-visible:ring-2`) to ensure keyboard accessibility.
