@@ -1,0 +1,9 @@
+## 2024-03-23 - Form Default Submission PII Leakage Risk
+**Vulnerability:** Registration form lacked an `onSubmit` handler with `e.preventDefault()`, which causes standard HTML form behavior (GET request) when the submit button is clicked. This places the values of any input fields directly into the URL parameters, risking the exposure of Personally Identifiable Information (PII) like names, emails, and phone numbers in browser history, server logs, or referrer headers.
+**Learning:** React single-page applications often use `<button type="submit">` inside forms for accessibility and standard enter-to-submit behavior. However, if the `onSubmit` event is not intercepted and default behavior prevented, it falls back to the native browser GET submission.
+**Prevention:** Always add `onSubmit={(e) => e.preventDefault()}` to `<form>` elements in React components if they are not explicitly handling form submissions in a specific, secure manner (e.g. POST requests via an API).
+
+## 2024-03-23 - Overly Permissive Third-Party Iframe (Google Maps)
+**Vulnerability:** The Google Maps `<iframe>` in `DirectionsRegistration.jsx` lacked a `sandbox` attribute, granting the third-party content unrestricted access to capabilities in the user's browser, which can be a vector for malicious activities if the third-party source is ever compromised or manipulated.
+**Learning:** While embedding external maps is a common requirement, giving them full privileges is unnecessary and violates the principle of least privilege.
+**Prevention:** Always use the `sandbox` attribute for third-party `<iframe>` embeddings to restrict their capabilities. For standard functional requirements like map interactions and opening links, `sandbox="allow-scripts allow-same-origin allow-popups"` provides a good balance between security and required functionality.
