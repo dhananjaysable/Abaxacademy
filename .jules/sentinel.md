@@ -1,0 +1,4 @@
+## 2025-03-09 - [Prevent PII Leakage and Harden Iframes]
+**Vulnerability:** The registration form lacked an `onSubmit` handler with `e.preventDefault()`, which could lead to PII leaking in URL parameters upon accidental submission. Additionally, the third-party map iframe lacked a `sandbox` attribute, potentially exposing the application to cross-site scripting (XSS) or other attacks from the embedded content.
+**Learning:** React forms will by default submit data as URL parameters (GET request) if not explicitly prevented. Embedded third-party content should always be sandboxed to limit its privileges to only what's necessary (scripts, same-origin, and popups for maps).
+**Prevention:** Always add `e.preventDefault()` to form `onSubmit` handlers to control the submission process. Always use the `sandbox` attribute on `<iframe>` elements to enforce security boundaries.
