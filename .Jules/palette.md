@@ -1,0 +1,3 @@
+## 2025-02-27 - Social Button Accessibility
+**Learning:** Icon-only social buttons in this application's Header frequently wrapped semantic `<button>` elements inside `<div>` containers that had all the interactive hover styles. This created an accessibility issue where the actual interactive element (the button) lacked `aria-label`s, and the interactive container didn't properly show `focus-visible` styles for keyboard navigation.
+**Action:** Always refactor these components to move interactive styles directly to the `<button>`, add `focus-visible:ring-2 focus-visible:ring-blue-500` ring styles, and include descriptive `aria-label`s. Ensure to check other components for similar wrapper-based interactive styles.
