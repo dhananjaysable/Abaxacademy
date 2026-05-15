@@ -12,26 +12,30 @@ const Header = () => {
 
 
       <div className="flex space-x-3">
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
-            <FaFacebook className="w-6 h-6 cursor-pointer" />
-          </button>
-        </div>
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
-            <BsTwitter className="cursor-pointer w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
-            <BsInstagram className="w-6 h-6 cursor-pointer" />
-          </button>
-        </div>
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
-            <LiaLinkedinIn className="w-7 h-7 text-white fill-current cursor-pointer" />
-          </button>
-        </div>
+        <button
+          aria-label="Visit our Facebook page"
+          className="p-3 rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center focus-visible:ring-2 focus-visible:ring-blue-400 focus:outline-none"
+        >
+          <FaFacebook className="w-6 h-6" />
+        </button>
+        <button
+          aria-label="Visit our Twitter profile"
+          className="p-3 rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center focus-visible:ring-2 focus-visible:ring-blue-400 focus:outline-none"
+        >
+          <BsTwitter className="w-6 h-6" />
+        </button>
+        <button
+          aria-label="Visit our Instagram profile"
+          className="p-3 rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center focus-visible:ring-2 focus-visible:ring-blue-400 focus:outline-none"
+        >
+          <BsInstagram className="w-6 h-6" />
+        </button>
+        <button
+          aria-label="Visit our LinkedIn profile"
+          className="p-3 rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center focus-visible:ring-2 focus-visible:ring-blue-400 focus:outline-none"
+        >
+          <LiaLinkedinIn className="w-7 h-7 text-white fill-current" />
+        </button>
       </div>
     </div>
   );
