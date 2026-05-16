@@ -1,0 +1,3 @@
+## 2024-05-16 - Prevent Static Array Re-allocation in Periodic Effects
+**Learning:** Defining static arrays inside a component function body when there are frequent state updates (like a `setInterval` in a `useEffect` that triggers re-renders) causes the array to be re-allocated on every tick, leading to continuous garbage collection overhead.
+**Action:** Always extract static configuration arrays or purely static data objects outside of the React component function definition, especially when the component contains frequent periodic state updates or relies on empty dependency arrays for `useEffect`.
