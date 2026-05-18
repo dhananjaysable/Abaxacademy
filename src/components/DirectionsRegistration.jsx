@@ -43,35 +43,42 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <input
                   type="text"
                   placeholder="Name"
-                  className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  aria-label="Name"
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  aria-label="Email"
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
                 <input
                   type="text"
                   placeholder="City"
-                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
+                  aria-label="City"
+                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <input
                   type="text"
                   placeholder="State"
-                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
+                  aria-label="State"
+                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
-                <select className="w-full p-2 rounded text-gray-800 bg-gray-100">
+                <select
+                  aria-label="Status"
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
                   <option value="">Status</option>
                   <option value="student">Student</option>
                   <option value="parent">Parent</option>
@@ -80,15 +87,17 @@ const DirectionsRegistration = () => {
               </div>
               <div>
                 <input
-                  type="text"
+                  type="tel"
                   placeholder="Mobile No"
-                  className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  aria-label="Mobile Number"
+                  pattern="[0-9]{10}"
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div className="w-full">
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white py-2 px-6 rounded cursor-pointer w-full"
+                  className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded cursor-pointer w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-700 transition-colors"
                 >
                   Submit
                 </button>
