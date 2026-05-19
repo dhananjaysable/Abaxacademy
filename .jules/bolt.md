@@ -1,0 +1,3 @@
+## 2024-05-19 - [Garbage Collection Overhead on Periodic Renders]
+ **Learning:** In components with periodic state updates (like `WhatWeDo.jsx` using `setInterval`), defining static arrays inside the component function leads to continuous garbage collection overhead, as the array is re-allocated and destroyed on every render interval.
+ **Action:** Always move static configuration objects and arrays to the module scope (outside the component definition) to ensure they are initialized exactly once, freeing up resources and preventing unnecessary object creation and destruction overhead.
