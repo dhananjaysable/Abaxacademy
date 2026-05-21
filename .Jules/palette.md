@@ -1,0 +1,3 @@
+## 2025-05-18 - Icon-only button wrappers lack semantic accessibility
+**Learning:** Found a specific pattern in this app's Header where interactive hover styles and background transitions were applied to parent `div` elements, while the inner `button` elements had no ARIA labels or styles themselves. This creates keyboard accessibility gaps because screen readers or keyboard navigation focus the `button`, but the visual hover feedback was on the un-focusable parent `div`.
+**Action:** When finding icon-only buttons encapsulated in `div` wrappers, remove the wrapper, apply styling and padding directly to the `<button>` element, add `focus-visible` styles, and ensure the button includes a descriptive `aria-label`.
