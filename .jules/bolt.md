@@ -1,0 +1,3 @@
+## 2024-05-23 - Define static objects outside components
+**Learning:** Multiple React components (`WhatWeDo`, `Benefits`, `CourseSection`) define static arrays within the component body. This causes unnecessary garbage collection and memory overhead during re-renders, especially in components like `WhatWeDo.jsx` which re-render periodically due to `setInterval`.
+**Action:** Move static data structures (like navigation items, benefits arrays, carousel configurations) outside the component definition block. Ensure that variables derived from these static configurations (like `.length`) are removed from `useEffect` dependency arrays, as outer-scope values don't need tracking.
