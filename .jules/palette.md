@@ -1,0 +1,3 @@
+## 2025-03-01 - Interactive Styles on Div Wrappers Instead of Semantic Buttons
+**Learning:** Found a recurring accessibility pattern in this repository where icon-only buttons lacked `aria-label`s, and their interactive styling (hover effects, sizing, transitions) was applied to a non-interactive parent `<div>` rather than the semantic `<button>` itself. This causes problems with keyboard navigation outlines and general semantic focus.
+**Action:** Always refactor these structures by moving interactive styles directly to the `<button>`, removing the wrapper `<div>`, and ensuring focus-visible ring styles and descriptive `aria-label`s are added for true a11y compliance.
