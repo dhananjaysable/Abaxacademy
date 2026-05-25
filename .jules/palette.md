@@ -1,0 +1,3 @@
+## 2025-02-24 - Interactive Styles on Wrapper Elements
+**Learning:** A common pattern in this project is placing interactive styles (`hover:`, `cursor-pointer`, etc.) on `<div>` wrappers surrounding unstyled `<button>` elements. This breaks keyboard focus visibility and creates a disconnected experience where the clickable area doesn't match the focusable area. Icon-only buttons also consistently lack `aria-label`s.
+**Action:** When auditing or adding interactive elements, always verify that interactive styles (including focus rings) are applied directly to the semantic `<button>` or `<a>` element, and that descriptive `aria-label`s are present for icon-only buttons. Avoid unnecessary wrapper `<div>`s for styling purposes.
