@@ -1,0 +1,3 @@
+## 2024-05-14 - React Performance: Periodic State Updates and Static Arrays
+**Learning:** In React components with periodic state updates (like `setInterval` in `WhatWeDo.jsx` triggering a state change every 5 seconds), defining static configuration objects or arrays (e.g., `carouselItems`) inside the component body causes continuous garbage collection overhead and potential ESLint dependency warnings, as these objects are recreated on every render cycle.
+**Action:** Always extract static configuration objects and arrays outside of the component definition (using uppercase naming conventions like `CAROUSEL_ITEMS`) to ensure they are created only once per module load, reducing unnecessary memory allocation and garbage collection.
