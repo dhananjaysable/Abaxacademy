@@ -25,6 +25,8 @@ const DirectionsRegistration = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-lg"
+                  sandbox="allow-scripts allow-same-origin allow-popups"
+                  title="Google Maps Embed"
                 ></iframe>
               </div>
               <div className="absolute bottom-0 left-0 bg-blue-400 p-4 text-white text-sm w-full md:w-3/4 rounded-tr-md">
@@ -43,7 +45,7 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); /* Prevent default submission to avoid PII exposure in URL */ }}>
               <div>
                 <input
                   type="text"
