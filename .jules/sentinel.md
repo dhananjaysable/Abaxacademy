@@ -1,0 +1,4 @@
+## 2024-05-27 - PII Leakage via Default Form GET and Third-Party Iframe Risks
+**Vulnerability:** Registration forms without `onSubmit` handlers default to GET submissions, risking PII exposure in URL parameters. Additionally, third-party iframes (like Google Maps) were un-sandboxed, and ESLint rule `react/jsx-no-target-blank` was disabled, presenting risks from third-party scripts and reverse tabnabbing.
+**Learning:** Default HTML form behavior in React can unintentionally expose sensitive data if `e.preventDefault()` is not strictly enforced. Third-party embeds should always follow the principle of least privilege.
+**Prevention:** Always attach an `onSubmit` handler with `e.preventDefault()` to forms handling PII. Enforce `sandbox` attributes on iframes with minimal necessary permissions (`allow-scripts allow-same-origin allow-popups`) and maintain strict ESLint rules for security (e.g., target="_blank" safety).
