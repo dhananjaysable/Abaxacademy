@@ -9,75 +9,76 @@ import i2 from "../assets/i2.jpg";
 import i3 from "../assets/i3.jpg";
 import leftbrain from "../assets/leftbrain.jpg";
 
-const WhatWeDo = () => {
-  const carouselItems = [
-    {
-      id: 1,
-      image: eduactivities,
-      title: "Welcome to ABAX ACADEMY",
-      description: "An Educational Abacus Learning Centre for Growing Children",
-    },
-    {
-      id: 2,
-      image: visualization,
-      title: "Develop Skills That Last a Lifetime",
-      description:
-        "Our proven methodology helps children excel in mathematics and beyond",
-    },
-    {
-      id: 3,
-      image: i2,
-      title: "Join Our Learning Community",
-      description: "Experience the joy of learning in a supportive environment",
-    },
-    {
-      id: 4,
-      image: creativity,
-      title: "Innovative Learning Techniques",
-      description:
-        "We use creative methods to make learning fun and engaging for children",
-    },
-    {
-      id: 5,
-      image: selfconfidence,
-      title: "Boost Confidence and Focus",
-      description:
-        "Our programs are designed to enhance children's confidence and concentration",
-    },
-    {
-      id: 6,
-      image: memory,
-      title: "Personalized Attention",
-      description:
-        "We ensure every child gets the attention they need to thrive",
-    },
-    {
-      id: 7,
-      image: i3,
-      title: "Building a Strong Foundation",
-      description:
-        "Prepare your child for academic success with our structured programs",
-    },
-    {
-      id: 8,
-      image: leftbrain,
-      title: "Interactive Learning Environment",
-      description:
-        "Children learn best in an environment that encourages interaction and curiosity",
-    },
-  ];
+// Optimization: Moved static array outside component to prevent re-allocation on every render.
+const CAROUSEL_ITEMS = [
+  {
+    id: 1,
+    image: eduactivities,
+    title: "Welcome to ABAX ACADEMY",
+    description: "An Educational Abacus Learning Centre for Growing Children",
+  },
+  {
+    id: 2,
+    image: visualization,
+    title: "Develop Skills That Last a Lifetime",
+    description:
+      "Our proven methodology helps children excel in mathematics and beyond",
+  },
+  {
+    id: 3,
+    image: i2,
+    title: "Join Our Learning Community",
+    description: "Experience the joy of learning in a supportive environment",
+  },
+  {
+    id: 4,
+    image: creativity,
+    title: "Innovative Learning Techniques",
+    description:
+      "We use creative methods to make learning fun and engaging for children",
+  },
+  {
+    id: 5,
+    image: selfconfidence,
+    title: "Boost Confidence and Focus",
+    description:
+      "Our programs are designed to enhance children's confidence and concentration",
+  },
+  {
+    id: 6,
+    image: memory,
+    title: "Personalized Attention",
+    description:
+      "We ensure every child gets the attention they need to thrive",
+  },
+  {
+    id: 7,
+    image: i3,
+    title: "Building a Strong Foundation",
+    description:
+      "Prepare your child for academic success with our structured programs",
+  },
+  {
+    id: 8,
+    image: leftbrain,
+    title: "Interactive Learning Environment",
+    description:
+      "Children learn best in an environment that encourages interaction and curiosity",
+  },
+];
 
+const WhatWeDo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1
+        prevIndex === CAROUSEL_ITEMS.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [carouselItems.length]);
+  }, []);
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
@@ -85,13 +86,13 @@ const WhatWeDo = () => {
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? carouselItems.length - 1 : prevIndex - 1
+      prevIndex === 0 ? CAROUSEL_ITEMS.length - 1 : prevIndex - 1
     );
   };
 
   const goToNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1
+      prevIndex === CAROUSEL_ITEMS.length - 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -113,7 +114,7 @@ const WhatWeDo = () => {
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-                {carouselItems.map((item) => (
+                {CAROUSEL_ITEMS.map((item) => (
                   <div
                     key={item.id}
                     className="min-w-full flex-shrink-0 p-4 sm:p-6 flex flex-col items-center justify-center text-center"
@@ -150,7 +151,7 @@ const WhatWeDo = () => {
             </button>
 
             <div className="flex justify-center mt-4 space-x-2">
-              {carouselItems.map((_, index) => (
+              {CAROUSEL_ITEMS.map((_, index) => (
                 <button
                   key={index}
                   className={`w-3 h-3 rounded-full focus:outline-none ${
