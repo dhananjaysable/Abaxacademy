@@ -1,0 +1,3 @@
+## 2025-05-28 - [Static Arrays and Intervals]
+ **Learning:** When moving static arrays outside of React components for performance (especially those with `setInterval` like carousels), their properties (like `.length`) must be removed from `useEffect` dependency arrays to avoid `react-hooks/exhaustive-deps` warnings, since they are now outer scope values.
+ **Action:** Always check `useEffect` dependencies after refactoring static configurations out of a component.
