@@ -1,19 +1,20 @@
 import { Check } from "lucide-react";
 import benefitsImage from "../assets/bg2.jpg";
 
-const Benefits = () => {
-  const benefits = [
-    "Students develop a great sense towards numbers",
-    "This increases their speed",
-    "Memory is enhanced remarkably",
-    "Activates right brain & trains to face competition",
-    "Increases comprehension & imagination",
-    "Endurance, learning & writing skills",
-    "Boosts their memory power",
-    "Promotes concentration of children",
-    "Enhances mathematical logic",
-  ];
+// Optimization: Extracted static array to module scope to prevent re-allocation on every render.
+const BENEFITS = [
+  "Students develop a great sense towards numbers",
+  "This increases their speed",
+  "Memory is enhanced remarkably",
+  "Activates right brain & trains to face competition",
+  "Increases comprehension & imagination",
+  "Endurance, learning & writing skills",
+  "Boosts their memory power",
+  "Promotes concentration of children",
+  "Enhances mathematical logic",
+];
 
+const Benefits = () => {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-center">
@@ -23,7 +24,7 @@ const Benefits = () => {
             Our Benefits
           </h3>
           <ul className="space-y-4">
-            {benefits.map((benefit, index) => (
+            {BENEFITS.map((benefit, index) => (
               <li key={index} className="flex items-start">
                 <Check className="text-green-500 w-6 h-6 mt-1 mr-3 flex-shrink-0" />
                 <span className="text-base leading-relaxed">{benefit}</span>
