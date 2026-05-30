@@ -1,0 +1,3 @@
+## 2024-06-25 - Icon-only buttons lacking ARIA labels and semantic structure
+**Learning:** Found a pattern in the codebase where icon-only buttons lacked descriptive `aria-label`s, and interactive styles (like hover effects and padding) were placed on wrapping `<div>` elements instead of the semantic `<button>` elements. This breaks keyboard navigation and causes issues with screen readers.
+**Action:** When finding icon-only buttons, always refactor them to remove wrapping `<div>` elements if they only serve to apply styling. Apply interactive styles directly to the `<button>` element, and ensure they have a descriptive `aria-label` and `focus-visible` styles for keyboard navigation.
