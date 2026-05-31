@@ -1,0 +1,3 @@
+## 2025-02-28 - Moving Static Arrays out of Components with Periodic Updates
+**Learning:** Defining static arrays inside React components that have periodic state updates (like `setInterval` in `WhatWeDo.jsx`) causes unnecessary continuous garbage collection overhead, as the array is recreated on every render tick.
+**Action:** Always move static arrays or constant objects outside the component definition and use uppercase naming conventions (e.g., `CAROUSEL_ITEMS`). Ensure their properties (like `.length`) are removed from `useEffect` dependency arrays to prevent ESLint warnings about outer scope values.
