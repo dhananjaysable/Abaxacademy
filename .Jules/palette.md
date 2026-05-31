@@ -1,0 +1,3 @@
+## 2024-06-01 - Icon-only button accessibility in headers
+**Learning:** In this application, interactive styles (like hover effects and padding) for icon-only buttons (like social media links) are frequently applied to non-interactive parent `<div>` wrappers instead of the semantic `<button>` elements. This breaks keyboard focus visibility and screen reader context because the `<button>` itself has no accessible name (aria-label) and is separated from the visual interactive feedback.
+**Action:** Always move interactive padding and hover classes from the parent wrapper directly to the `<button>`, add explicit `aria-label`s to the `<button>`, and ensure `focus-visible` ring styles are present to maintain a visible focus state for keyboard navigation.
