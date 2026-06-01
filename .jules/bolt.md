@@ -1,0 +1,3 @@
+## 2025-02-23 - Prevent Garbage Collection Overhead in Periodic Component Updates
+**Learning:** In components with continuous state updates like intervals (`setInterval` used for carousels), defining static arrays or objects inside the component function scope causes continuous garbage collection overhead since they are re-created every few seconds. This is an unnecessary strain that impacts rendering performance.
+**Action:** Always move static arrays or constant objects outside of the component definition, rename them following uppercase constants convention (e.g. `CAROUSEL_ITEMS`), and remove them or their properties (like `.length`) from `useEffect` dependency arrays to prevent ESLint warnings and performance bottlenecks.
