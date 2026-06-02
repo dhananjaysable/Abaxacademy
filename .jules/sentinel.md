@@ -1,0 +1,4 @@
+## 2025-06-02 - [PII Leakage in Form Submission]
+**Vulnerability:** Unprevented default form submission leaking PII via URL parameters. By default, `<form>` elements submit as GET requests which append inputs as query parameters to the URL.
+**Learning:** React forms should explicitly prevent the default submission behavior (`e.preventDefault()`) on `onSubmit` handlers. Additionally, relying solely on custom components without basic HTML5 validation like `required`, `pattern` or `type="tel"` misses an important security and data consistency layer.
+**Prevention:** Always ensure standard React `<form>` elements include `onSubmit={(e) => e.preventDefault()}` when custom JS handling is needed or to prevent arbitrary GET submissions. Use HTML5 validation attributes on standard inputs to enforce structural integrity.
