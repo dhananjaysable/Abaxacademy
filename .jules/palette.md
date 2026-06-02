@@ -1,0 +1,3 @@
+## 2025-01-20 - Interactive Styles on Semantic Elements
+**Learning:** In this application, interactive styles (like hovers and cursors) and tooltips were often placed on non-interactive parent `<div>` wrappers instead of the semantic `<button>` elements. This breaks keyboard accessibility since the visual changes wouldn't trigger on focus, and users navigating via keyboard wouldn't see where they are.
+**Action:** When creating or refactoring buttons, ensure all interactive styles (hover, focus-visible) and accessibility attributes (aria-labels for icon-only buttons) are applied directly to the `<button>` element itself, not its wrapper.
