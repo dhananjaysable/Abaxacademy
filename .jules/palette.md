@@ -1,0 +1,3 @@
+## 2025-03-08 - Accessible Icon Buttons
+**Learning:** In this application's components, interactive styles (hover effects, padding) for icon-only buttons are frequently applied to parent wrapper `<div>` elements rather than the semantic `<button>` elements. This breaks keyboard focus visibility and accessibility.
+**Action:** Always refactor these by moving interactive classes directly to the `<button>`, adding `focus-visible:ring-2 focus-visible:outline-none` styles, and including descriptive `aria-label`s.
