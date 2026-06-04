@@ -1,0 +1,3 @@
+## 2025-05-18 - [Optimizing Static Data with Periodic Re-renders]
+**Learning:** Static arrays defined inside components with interval-based state updates (like `setInterval`) cause continuous garbage collection overhead on every re-render tick.
+**Action:** Always define static arrays and configuration objects outside the component to prevent this overhead, and remove their `.length` properties from `useEffect` dependency arrays to fix lint warnings about outer scope values.
