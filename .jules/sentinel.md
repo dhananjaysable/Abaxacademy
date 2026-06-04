@@ -1,0 +1,4 @@
+## 2025-03-03 - Form Submission PII Leakage Risk
+**Vulnerability:** React forms in this application (`DirectionsRegistration.jsx`) lacked `onSubmit` handlers to prevent default HTML form submission behavior. This means pressing "Submit" could trigger a GET request, appending user input (Name, Email, Mobile No, etc.) to the URL as query parameters, potentially logging PII in browser history or server access logs.
+**Learning:** This codebase's specific vulnerability pattern where React forms lack default submission prevention risking PII exposure in URLs. UI forms were built focusing on layout without stubbing out the interactive behavior, leading to insecure default HTML behaviors.
+**Prevention:** Always add an `onSubmit` handler with `e.preventDefault()` to React forms, even if the form submission logic isn't fully implemented yet, to prevent unintended GET submissions and potential PII leakage.
