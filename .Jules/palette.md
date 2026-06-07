@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessible Icon Buttons
+**Learning:** Icon-only buttons frequently have interactive styles (like hover states) applied to their non-interactive parent `<div>` wrappers instead of the semantic `<button>` elements, which hinders accessibility and keyboard navigation.
+**Action:** Always move interactive styles directly to the `<button>` element, add `focus-visible` ring styles, and include descriptive `aria-label`s.
