@@ -1,0 +1,3 @@
+## 2025-06-08 - [Static Array Garbage Collection Overhead with setInterval]
+**Learning:** In components like `WhatWeDo.jsx` that have periodic state updates (e.g., `setInterval` ticking every 5 seconds), defining static arrays or configuration objects inside the component definition causes unnecessary continuous garbage collection overhead on every re-render.
+**Action:** Move static configuration arrays and objects outside of the component definition, renaming them to uppercase conventions (e.g., `CAROUSEL_ITEMS`), and ensure they are removed from `useEffect` dependency arrays to prevent `react-hooks/exhaustive-deps` warnings.
