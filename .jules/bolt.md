@@ -1,0 +1,3 @@
+## 2024-06-09 - Prevent Continuous Garbage Collection in Periodic Components
+**Learning:** Static arrays or objects defined inside React components that rely on `setInterval` periodic state updates trigger continuous reallocation and garbage collection overhead.
+**Action:** Move large static configurations like `CAROUSEL_ITEMS` outside the component scope to avoid recreating them on every timer-triggered render tick.
