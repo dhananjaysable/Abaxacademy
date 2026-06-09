@@ -1,0 +1,3 @@
+## 2025-06-09 - Interactive Styles on Button Wrappers
+**Learning:** In this application, interactive styles (like hover effects and padding) are frequently applied to non-interactive `<div>` wrappers instead of the semantic `<button>` elements. This breaks standard keyboard navigation focus rings and causes accessibility issues since the button itself doesn't visually react when focused.
+**Action:** When refactoring icon-only buttons, always move the interactive styles and layout properties directly to the `<button>` element, add `aria-label`s, and include `focus-visible:ring-2 focus-visible:outline-none` styles to ensure proper keyboard accessibility.
