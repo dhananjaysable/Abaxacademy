@@ -1,0 +1,3 @@
+## 2024-06-10 - Static Arrays in Periodically Re-rendering Components
+**Learning:** Defining static configuration objects or arrays inside a React component that undergoes periodic state updates (e.g., via `setInterval`) causes unnecessary continuous garbage collection overhead and triggers ESLint exhaustive-deps warnings if included in `useEffect` dependency arrays, as the reference changes on every render.
+**Action:** Always move static arrays and configuration objects outside of the component definition to ensure their references remain stable and to prevent unnecessary garbage collection.
