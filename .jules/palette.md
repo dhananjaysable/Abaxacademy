@@ -1,0 +1,3 @@
+## 2025-06-12 - [Accessible Interactive Elements]
+**Learning:** Found a specific pattern in this app's components (e.g., Header.jsx) where interactive styles (hover effects) and event handling contexts are applied to non-interactive parent wrapper `<div>` elements instead of the semantic `<button>` elements, which often lack `aria-label`s for screen readers.
+**Action:** Always refactor these structures by moving interactive styling and pointer styles directly to the `<button>`, applying `focus-visible` ring styles to ensure keyboard accessibility, and adding descriptive `aria-label`s for icon-only buttons.
