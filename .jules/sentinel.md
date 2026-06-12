@@ -1,0 +1,4 @@
+## 2025-03-01 - Prevent Default Form GET Submissions
+**Vulnerability:** React forms without an explicit `onSubmit` handler or `action` attribute default to a standard HTML GET submission when a submit button is clicked. This places the form's input values into the URL query parameters.
+**Learning:** In applications capturing Personal Identifiable Information (PII) like names, emails, and phone numbers, this default behavior can lead to unintentional PII leakage into browser histories, proxy logs, or server logs. The registration form in this codebase was susceptible to this.
+**Prevention:** Always ensure React forms dealing with PII have an `onSubmit` handler that explicitly calls `e.preventDefault()` to stop the default browser GET submission, handling the data via API calls or state management instead.
