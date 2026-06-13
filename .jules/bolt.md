@@ -1,0 +1,3 @@
+## 2025-05-18 - Continuous Garbage Collection Overhead
+**Learning:** In React components with periodic state updates (like `setInterval` triggering every few seconds in `WhatWeDo.jsx`), leaving static arrays inside the component causes continuous reallocation and garbage collection overhead. This creates unnecessary work for the JS engine.
+**Action:** Always move static arrays and configuration objects outside of the component definition, especially when components update frequently. Ensure they are removed from `useEffect` dependencies if applicable.
