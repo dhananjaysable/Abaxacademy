@@ -1,0 +1,3 @@
+## 2024-06-13 - Accessibility of icon-only buttons in Header
+**Learning:** In this application, interactive styles (like hover effects and background colors) for icon-only buttons are often applied to non-interactive parent `<div>` wrappers instead of the semantic `<button>` elements. This causes poor keyboard navigation as the actual focused element (the button) doesn't visually indicate focus, and without `aria-label`s, screen readers don't know what the buttons do.
+**Action:** When finding icon-only buttons with wrapper `<div>`s, move the interactive styling directly to the `<button>`, add `focus-visible:ring-2 focus-visible:ring-blue-500 focus:outline-none` for proper keyboard focus indication, and ensure descriptive `aria-label` attributes are included.
