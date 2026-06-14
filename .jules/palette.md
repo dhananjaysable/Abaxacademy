@@ -1,0 +1,3 @@
+## 2024-06-14 - Interactive styles on non-interactive parents
+**Learning:** Icon-only buttons often have interactive styles (like `hover:bg-gray-700`) applied to a non-interactive parent `<div>` wrapper instead of the semantic `<button>`. They also frequently lack `aria-label`s. This makes keyboard navigation confusing as the visual focus state is not coupled to the actual actionable element, and screen readers get no context.
+**Action:** Always move interactive styles directly to the semantic `<button>` element, ensure they have `focus-visible` styles for keyboard navigation, and add descriptive `aria-label`s for screen reader support.
