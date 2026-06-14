@@ -1,0 +1,4 @@
+## 2025-03-05 - [Form GET Submission PII Leakage]
+**Vulnerability:** Forms using default HTML submission behavior send data via GET requests, which appends form field values (including PII like name, email, phone) to the URL. These URLs are then logged in browser history, server logs, and potentially leaked via Referer headers. Additionally, lack of client-side input validation allows malformed data to be submitted.
+**Learning:** Default HTML form submission must always be intercepted in React using `e.preventDefault()` unless explicitly designed for a GET request without sensitive data.
+**Prevention:** Always attach an `onSubmit` handler to `<form>` elements in React that calls `e.preventDefault()`, and implement standard HTML5 validation attributes (`required`, `pattern`, `type="email"`, `type="tel"`) to secure inputs.
