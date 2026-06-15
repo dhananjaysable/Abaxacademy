@@ -1,0 +1,3 @@
+## 2024-06-15 - [Moving Static Arrays Outside Components]
+**Learning:** In React components with frequent state updates (like `setInterval` in carousels), defining static configuration arrays inside the component body creates continuous garbage collection overhead since the array is re-created on every render.
+**Action:** Always extract static configuration arrays or objects to the module scope (outside the component definition) and name them using uppercase conventions (e.g., `CAROUSEL_ITEMS`). This pattern should be consistently applied across all similar components.
