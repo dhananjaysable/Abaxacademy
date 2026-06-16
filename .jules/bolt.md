@@ -1,0 +1,3 @@
+## 2025-02-28 - Moving Static Arrays Outside React Components
+**Learning:** In React, defining static arrays or objects inside a component causes them to be recreated on every render. If these arrays are used inside a `useEffect` dependency array, they can trigger continuous re-renders or garbage collection overhead.
+**Action:** Always extract static configurations or arrays (like `carouselItems`) outside the component definition and capitalize the constant name (`CAROUSEL_ITEMS`). Ensure they are removed from `useEffect` dependency arrays to prevent ESLint warnings or unnecessary updates.
