@@ -1,0 +1,3 @@
+## 2024-03-24 - [Accessible Icon Buttons]
+**Learning:** Found a pattern where interactive styles (like hover effects and padding) and click events were placed on non-interactive parent `<div>` wrappers instead of the semantic `<button>` elements, which lacked `aria-label`s for screen readers.
+**Action:** When implementing icon-only buttons, always apply interactive styles (hover, focus rings) and accessibility attributes (`aria-label`) directly to the `<button>` element rather than wrapping them in stylised `<div>`s to ensure keyboard navigability and correct screen reader announcement.
