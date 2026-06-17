@@ -1,0 +1,5 @@
+## 2024-06-17 - Avoid Static Arrays Inside Components
+
+**Learning:** This codebase frequently defines large static data arrays (e.g., `carouselItems`, `benefits`, `courses`) directly inside React component definitions. This is a significant anti-pattern because these arrays are re-created in memory on every single render. It's particularly detrimental in components like `WhatWeDo.jsx`, which uses a `setInterval` that forces a re-render every 5 seconds. This causes continuous memory reallocation and unnecessary work for the garbage collector.
+
+**Action:** When acting on this codebase, always hunt for static arrays or configuration objects defined inside component bodies. Move them to the outer scope (and name them with `UPPERCASE_SNAKE_CASE` by convention). Critically, make sure to remove these arrays or their properties (like `.length`) from `useEffect` dependency arrays when you do so, as they are no longer dynamic state and doing so prevents ESLint `react-hooks/exhaustive-deps` warnings.
