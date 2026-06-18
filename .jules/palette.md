@@ -1,0 +1,3 @@
+## 2024-06-18 - Semantic Buttons vs Wrappers for Interactive Elements
+**Learning:** Found a pattern where interactive styles (hover effects, layouts) for icon-only social links were applied to non-interactive `<div>` wrappers instead of the semantic `<button>` elements, which also lacked `aria-label`s. This harms keyboard accessibility because focus indicators appear incorrectly or not at all, and screen readers cannot announce the button's purpose.
+**Action:** Always move interactive styles directly to the semantic `<button>`, add `focus-visible` styles (`focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none`), and ensure a descriptive `aria-label` is present for all icon-only buttons.
