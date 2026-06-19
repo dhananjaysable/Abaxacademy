@@ -1,0 +1,3 @@
+## 2024-06-19 - Extract Static Arrays to Prevent Garbage Collection Overhead
+**Learning:** In React components with periodic state updates (like `WhatWeDo.jsx` with `setInterval`), defining static configuration arrays (like `carouselItems`) inside the component body creates continuous garbage collection overhead on every re-render tick.
+**Action:** Always move static arrays outside of component definitions and uppercase their names (e.g., `CAROUSEL_ITEMS`) to optimize memory usage and performance, ensuring they are also removed from any `useEffect` dependency arrays since they no longer close over component scope.
