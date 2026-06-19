@@ -1,0 +1,3 @@
+## 2025-03-24 - Improve ARIA and keyboard accessibility on icon-only buttons
+**Learning:** Icon-only buttons often lack descriptive text for screen readers, and applying hover/focus styles to a wrapping `div` instead of the semantic `button` element breaks keyboard accessibility and focus rings. This app uses `react-icons` in several places wrapped in `div`s.
+**Action:** Always move interactive styles (`hover`, `focus-visible:ring-2`) directly to the semantic `<button>` elements, remove wrapping `div`s used solely for styling if possible, and ensure every icon-only `<button>` has a descriptive `aria-label`.
