@@ -1,0 +1,3 @@
+## 2024-06-20 - Static Arrays in Components
+**Learning:** Defining static arrays (like `carouselItems` or `benefits`) inside React components causes them to be recreated on every render. In components with frequent state updates (like `WhatWeDo.jsx` with a `setInterval`), this leads to unnecessary garbage collection overhead.
+**Action:** Always move static arrays and configuration objects outside of the component definition. Remember to update any `useEffect` dependency arrays that might rely on properties of these arrays (like `.length`), as outer scope values don't need to be in the dependency array.
