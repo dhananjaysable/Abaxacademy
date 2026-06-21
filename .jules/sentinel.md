@@ -1,0 +1,4 @@
+## 2024-05-18 - Prevent PII Leakage in React Forms
+**Vulnerability:** React forms submitting via default GET request, which appends form data to the URL.
+**Learning:** Default form submissions in React without `e.preventDefault()` can inadvertently leak Personally Identifiable Information (PII) like mobile numbers in URL parameters, which might get logged in server logs or browser history.
+**Prevention:** Always attach an `onSubmit` handler to `<form>` elements in React with `e.preventDefault()` to handle submission securely, and enforce client-side validation using standard HTML5 input attributes (like `pattern` and `required`).
