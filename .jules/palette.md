@@ -1,0 +1,3 @@
+## 2024-05-24 - Interactive Styles on Incorrect Elements
+**Learning:** In this application, interactive styles (like `hover` backgrounds and `cursor-pointer`) on icon-only buttons are frequently applied to non-interactive parent `<div>` wrappers instead of the semantic `<button>` elements. This prevents proper keyboard focus visibility (`focus-visible`) and makes the interactive area confusing for screen reader users since the focusable element (`<button>`) doesn't visually receive the hover state.
+**Action:** When refactoring icon-only buttons, always move interactive classes (`hover:`, `cursor-pointer`, etc.) directly to the `<button>` element, add `focus-visible` ring styles, and ensure an explicit `aria-label` is present.
