@@ -1,0 +1,3 @@
+## 2024-06-29 - [Header Social Buttons Accessibility]
+**Learning:** Found a pattern where interactive styles (hover backgrounds) are applied to non-interactive `div` wrappers while semantic `<button>` tags within are left unstyled and lacking accessible `aria-label`s. This pattern impairs keyboard navigation and screen reader support.
+**Action:** Move interactive classes (like `hover:bg-gray-700`) directly to the `<button>` element. Ensure the button has an appropriate `aria-label` and `focus-visible` ring styles (`focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none`) to maintain usability and accessibility.
