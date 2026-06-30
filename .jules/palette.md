@@ -1,0 +1,3 @@
+## 2024-06-30 - Interactive Styles on Semantic Elements
+**Learning:** In this application's UI components, icon-only buttons frequently lack `aria-label`s and have interactive styles (e.g., hover effects) applied to non-interactive parent `<div>` wrappers rather than the semantic `<button>` elements. This breaks keyboard accessibility since the visual changes are applied incorrectly.
+**Action:** Always refactor these by moving interactive styles directly to the `<button>`, adding `focus-visible` ring styles, and including descriptive `aria-label`s to ensure both keyboard and screen reader accessibility are maintained while keeping the existing design patterns.
