@@ -1,0 +1,3 @@
+## 2024-03-24 - Accessible Icon-Only Buttons
+**Learning:** Found a recurring anti-pattern where interactive styles (hover effects, padding) and click handlers were applied to non-interactive `<div>` wrappers instead of the semantic `<button>` elements inside them. This causes the buttons to have tiny, invisible click targets for screen reader users and keyboard navigators, and breaks expected native focus behavior.
+**Action:** Always verify that interactive styles, focus states (`focus-visible:ring-2`), and `aria-label` attributes are applied directly to the `<button>` element itself, avoiding unnecessary wrapping `<div>`s for interactions.
