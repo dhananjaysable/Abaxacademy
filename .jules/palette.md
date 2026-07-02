@@ -1,0 +1,3 @@
+## 2025-02-27 - Social Media Button Accessibility
+**Learning:** This app follows a pattern of applying interactive styles (like `hover:bg-gray-700`) to `<div>` wrappers surrounding unstyled `<button>` elements, which breaks native keyboard accessibility and focus rings on the actual interactive element. Additionally, icon-only social media buttons frequently lack descriptive `aria-label`s.
+**Action:** When refactoring interactive elements, strictly move layout and interaction styles (padding, hover states, rounded borders) directly onto the semantically correct element (like `<button>`), remove the now-redundant `<div>` wrapper, and explicitly add `focus-visible` styling and `aria-label`s to ensure both visual parity and keyboard/screen-reader accessibility.
