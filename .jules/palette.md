@@ -1,0 +1,3 @@
+## 2025-02-27 - Carousel Accessibility and Focus States
+**Learning:** Custom interactive UI elements, such as carousel navigation buttons (previous/next arrows) and dot indicators, often lack screen reader accessibility (`aria-label`) and visible keyboard focus states (`focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none`) by default in this application.
+**Action:** When working on custom interactive elements, always verify and implement semantic labels and explicit focus ring styles to ensure they are fully usable via screen reader and keyboard navigation.
