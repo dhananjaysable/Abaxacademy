@@ -1,0 +1,3 @@
+## 2025-05-18 - [Fix interactive classes on icon-only buttons]
+**Learning:** Found a pattern where interactive styles (`hover:bg-gray-700`, `transition duration-300`) were incorrectly applied to non-interactive `div` wrappers of social icon buttons instead of the semantic `<button>` elements, severely impacting keyboard navigation and accessibility. Icon buttons were also missing `aria-label`s.
+**Action:** Move interactive styling directly onto the `<button>` element, add clear `focus-visible` styles (`focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none`) for keyboard users, and ensure explicit `aria-label` attributes are assigned to all icon-only buttons.
