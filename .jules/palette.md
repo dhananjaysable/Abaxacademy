@@ -1,0 +1,3 @@
+## 2025-07-06 - Improve accessibility for icon-only buttons
+**Learning:** Interactive styles (like hover) and padding for icon-only buttons in the application are often applied to a non-interactive parent `<div>` wrapper rather than the semantic `<button>` element itself. This leads to an inconsistent hit area and lacks proper keyboard accessibility focus indicators.
+**Action:** When working on icon-only buttons, move padding and hover/transition styles directly to the `<button>` element, add `focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none` for clear keyboard focus, and always include a semantic `aria-label`.
