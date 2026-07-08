@@ -1,0 +1,3 @@
+## 2024-07-08 - Added ARIA labels and Focus Styles to Header Social Icons
+**Learning:** Found an accessibility issue pattern specific to this app's components where icon-only buttons lacked `aria-label`s and had interactive styles (e.g., hover, cursor, padding) applied to non-interactive parent `<div>` wrappers instead of the semantic `<button>` elements. This breaks standard keyboard navigation focus feedback for those components.
+**Action:** Always verify that interactive styles and standard visual cues (`focus-visible:ring`, `hover:bg`) for clickable elements are placed directly on semantic `<button>` tags rather than wrapper `<div>`s to ensure robust accessibility.
