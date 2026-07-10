@@ -43,7 +43,8 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            {/* SECURITY: Prevent default form submission which could leak PII in URL parameters via GET request */}
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <input
                   type="text"
