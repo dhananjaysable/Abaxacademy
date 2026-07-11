@@ -12,24 +12,24 @@ const Header = () => {
 
 
       <div className="flex space-x-3">
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
-            <FaFacebook className="w-6 h-6 cursor-pointer" />
+        <div className="flex items-center justify-center">
+          <button aria-label="Facebook" className="p-3 cursor-pointer rounded-full hover:bg-gray-700 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none transition duration-300">
+            <FaFacebook className="w-6 h-6" />
           </button>
         </div>
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
-            <BsTwitter className="cursor-pointer w-6 h-6" />
+        <div className="flex items-center justify-center">
+          <button aria-label="Twitter" className="p-3 cursor-pointer rounded-full hover:bg-gray-700 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none transition duration-300">
+            <BsTwitter className="w-6 h-6" />
           </button>
         </div>
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
-            <BsInstagram className="w-6 h-6 cursor-pointer" />
+        <div className="flex items-center justify-center">
+          <button aria-label="Instagram" className="p-3 cursor-pointer rounded-full hover:bg-gray-700 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none transition duration-300">
+            <BsInstagram className="w-6 h-6" />
           </button>
         </div>
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
-            <LiaLinkedinIn className="w-7 h-7 text-white fill-current cursor-pointer" />
+        <div className="flex items-center justify-center">
+          <button aria-label="LinkedIn" className="p-3 cursor-pointer rounded-full hover:bg-gray-700 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none transition duration-300">
+            <LiaLinkedinIn className="w-7 h-7 text-white fill-current" />
           </button>
         </div>
       </div>

@@ -1,0 +1,3 @@
+## 2024-07-11 - Accessibility on social media links
+**Learning:** Icon-only buttons often lack `aria-label`s and have interactive styles (e.g., hover effects) applied to non-interactive parent `<div>` wrappers rather than the semantic `<button>` elements.
+**Action:** Always refactor these by moving interactive styles directly to the `<button>`, adding `focus-visible` ring styles, and including descriptive `aria-label`s to maintain keyboard navigation and accessibility.
