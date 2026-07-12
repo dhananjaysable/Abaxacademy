@@ -1,0 +1,3 @@
+## 2024-05-18 - Registration Form Accessibility & Validation
+**Learning:** The registration form in `DirectionsRegistration.jsx` lacked standard HTML5 validation for mobile numbers, used generic `e.preventDefault()` omissions causing potential PII leaks, and missed critical ARIA labels and focus-visible states on inputs and the submit button. This is a common pattern in the application.
+**Action:** Implemented `e.preventDefault()` on form submit, added `aria-label`, `required`, and `focus-visible` styles to all form inputs. Added strict `type="tel"`, `pattern="[0-9]{10}"`, and `maxLength={10}` to the mobile input. Ensure all future forms strictly adhere to these baseline accessibility and security standards.
