@@ -1,0 +1,3 @@
+## 2025-03-05 - Interactive Styles on Parent Elements vs. Buttons
+**Learning:** In the `Header.jsx` component, interactive styles (like hover backgrounds and rounding) were applied to `<div>` wrappers instead of the semantically correct, focusable `<button>` elements inside them. This prevents `focus-visible` styles on the button from properly matching the expected visual shape of the interactive area, degrading keyboard accessibility and semantic correctness.
+**Action:** Always move interactive styles (e.g., hover, background, padding) directly to the semantic `<button>` or `<a>` elements and add `focus-visible:ring-2` to ensure the focus indicator matches the interactive area. Added `aria-label`s to the icon-only buttons.
