@@ -1,0 +1,4 @@
+## 2025-07-14 - Fix PII leak in URL parameters and harden iframe
+**Vulnerability:** React forms without an `onSubmit` handler default to a GET request submission which can leak Personally Identifiable Information (PII) as URL parameters. Third-party map embeds without sandbox attributes are vulnerable to reverse tabnabbing and cross-site scripting (XSS).
+**Learning:** Default browser behaviors in standard HTML elements (like forms and iframes) can present significant security risks when used in modern React applications without appropriate overriding configurations or sandbox limitations.
+**Prevention:** Always add an `onSubmit={(e) => e.preventDefault()}` handler to React `<form>` elements when they are not explicitly configured for secure submission logic. Use `sandbox="allow-scripts allow-same-origin allow-popups"` on all external iframes.
