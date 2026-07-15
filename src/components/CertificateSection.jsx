@@ -27,10 +27,12 @@ const CertificateSection = () => {
               key={item}
               className="border border-red-200 rounded p-2 shadow-sm flex justify-center hover:shadow-md transition-shadow"
             >
+              {/* ⚡ Bolt: Lazy load below-the-fold images to reduce initial payload and improve LCP */}
               <img
                 src={certificates[item - 1]}
                 alt={`Certificate sample ${item}`}
                 className="h-48 w-full object-contain"
+                loading="lazy"
               />
             </div>
           ))}

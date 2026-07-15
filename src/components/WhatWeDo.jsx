@@ -119,10 +119,12 @@ const WhatWeDo = () => {
                     className="min-w-full flex-shrink-0 p-4 sm:p-6 flex flex-col items-center justify-center text-center"
                   >
                     <div className="mb-6 sm:mb-8">
+                      {/* ⚡ Bolt: Lazy load below-the-fold images to reduce initial payload and improve LCP */}
                       <img
                         src={item.image}
                         alt={item.title}
                         className="mx-auto rounded-full bg-yellow-100 p-2 mb-4 w-28 h-28 sm:w-40 sm:h-40 lg:w-48 lg:h-48 object-cover"
+                        loading="lazy"
                       />
                     </div>
 
