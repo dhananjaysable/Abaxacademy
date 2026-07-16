@@ -1,0 +1,3 @@
+## 2025-03-01 - Add ARIA labels and focus styles to social buttons
+**Learning:** Found an accessibility issue pattern specific to this app's components where interactive styles (hover effects) and cursor states were applied to non-interactive parent `<div>` wrappers rather than the semantic `<button>` elements inside them. Icon-only buttons were also missing `aria-label`s.
+**Action:** When implementing or fixing icon-only buttons in this app, ensure interactive styles and focus indicators (`focus-visible:ring-2`, etc) are applied directly to the `<button>` element, and always add descriptive `aria-label`s.
