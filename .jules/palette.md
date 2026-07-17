@@ -1,0 +1,3 @@
+## 2025-03-05 - Accessible Social Media Buttons
+**Learning:** In this application, interactive icon-only buttons (like social media links in headers) often have their interactive styles (hover effects, padding, rounded corners) applied to non-interactive `<div>` wrappers instead of the semantic `<button>` elements, which lack `aria-label`s and visible focus states.
+**Action:** When working on icon-only buttons, always refactor to apply interactive styles directly to the `<button>` element, remove outer non-semantic `<div>`s, add descriptive `aria-label`s, and include explicit focus indicators (e.g. `focus-visible:ring-2`).
