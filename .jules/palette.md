@@ -1,0 +1,3 @@
+## 2025-03-01 - Add `aria-label`s and semantic elements for interactive icons
+**Learning:** Icon-only elements wrapped in non-semantic, non-accessible `<div>`s were used heavily for social links, making them unreachable by keyboard and meaningless to screen readers.
+**Action:** Always wrap icon-only interactive elements in semantic `<button>` tags with descriptive `aria-label` attributes and explicitly set `focus-visible` styles to ensure keyboard accessibility.
