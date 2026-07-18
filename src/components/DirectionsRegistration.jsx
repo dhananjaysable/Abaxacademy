@@ -43,7 +43,8 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            {/* SECURITY: Prevent default GET submission to avoid leaking PII in URL parameters */}
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div>
                 <input
                   type="text"
@@ -79,10 +80,14 @@ const DirectionsRegistration = () => {
                 </select>
               </div>
               <div>
+                {/* SECURITY: Input validation for mobile number */}
                 <input
-                  type="text"
+                  type="tel"
                   placeholder="Mobile No"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  pattern="[0-9]{10}"
+                  maxLength="10"
+                  required
                 />
               </div>
               <div className="w-full">
