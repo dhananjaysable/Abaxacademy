@@ -25,6 +25,7 @@ const DirectionsRegistration = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-lg"
+                  sandbox="allow-scripts allow-same-origin allow-popups"
                 ></iframe>
               </div>
               <div className="absolute bottom-0 left-0 bg-blue-400 p-4 text-white text-sm w-full md:w-3/4 rounded-tr-md">
