@@ -1,0 +1,3 @@
+## 2024-07-20 - Improve keyboard accessibility for header social links
+**Learning:** Icon-only buttons frequently lack `aria-label`s and have interactive styles (e.g., hover effects) applied to non-interactive parent `<div>` wrappers rather than the semantic `<button>` elements. This makes keyboard navigation confusing and inaccessible, as the focus indicators do not match the interactive area, and screen readers cannot describe the buttons' purpose.
+**Action:** When fixing accessibility for icon-only buttons, always refactor by moving interactive styles directly to the `<button>`, adding `focus-visible` ring styles, and including descriptive `aria-label`s. Ensure redundant wrapper `<div>` elements are removed to maintain a clean structure.
