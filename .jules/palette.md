@@ -1,0 +1,3 @@
+## 2024-07-21 - Custom Carousels Missing ARIA Labels and Focus Indicators
+**Learning:** Custom carousels with icon-only navigation buttons and pagination dots frequently lack `aria-label`s and use `focus:outline-none`, breaking keyboard accessibility and screen reader support.
+**Action:** Always verify interactive UI elements have semantic `aria-label`s and replace `focus:outline-none` with explicit focus styles like `focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none`.
