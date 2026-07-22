@@ -13,7 +13,7 @@ const MainNavbar = () => {
       <div className="container mx-auto gap-7 px-4 py-4 w-full flex items-center justify-center">
 
         <button
-          className="md:hidden focus:outline-none"
+          className="md:hidden focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
