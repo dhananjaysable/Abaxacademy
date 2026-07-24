@@ -48,6 +48,7 @@ const DirectionsRegistration = () => {
                 <input
                   type="text"
                   placeholder="Name"
+                  required
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
@@ -55,6 +56,7 @@ const DirectionsRegistration = () => {
                 <input
                   type="email"
                   placeholder="Email"
+                  required
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
@@ -62,16 +64,18 @@ const DirectionsRegistration = () => {
                 <input
                   type="text"
                   placeholder="City"
+                  required
                   className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
                 />
                 <input
                   type="text"
                   placeholder="State"
+                  required
                   className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
               <div>
-                <select className="w-full p-2 rounded text-gray-800 bg-gray-100">
+                <select required className="w-full p-2 rounded text-gray-800 bg-gray-100">
                   <option value="">Status</option>
                   <option value="student">Student</option>
                   <option value="parent">Parent</option>
@@ -80,8 +84,11 @@ const DirectionsRegistration = () => {
               </div>
               <div>
                 <input
-                  type="text"
+                  type="tel"
                   placeholder="Mobile No"
+                  required
+                  pattern="[0-9]{10}"
+                  maxLength="10"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
