@@ -1,3 +1,4 @@
+// ⚡ Bolt Performance Optimization: Hoisted static array out of component to prevent reallocation on every render.
 import certificate1 from "../assets/abax academy ico.png";
 import certificate2 from "../assets/cert.jpg";
 import certificate3 from "../assets/gumsta.png";
@@ -5,15 +6,16 @@ import certificate4 from "../assets/Certificate3.jpg";
 import certificate5 from "../assets/Certificate4.jpg";
 import certificate6 from "../assets/udyam registration.png";
 
+const certificates = [
+  certificate1,
+  certificate2,
+  certificate3,
+  certificate4,
+  certificate5,
+  certificate6,
+];
+
 const CertificateSection = () => {
-  const certificates = [
-    certificate1,
-    certificate2,
-    certificate3,
-    certificate4,
-    certificate5,
-    certificate6,
-  ];
   return (
     <section className="py-12 px-6">
       <div className="container mx-auto">
