@@ -1,3 +1,4 @@
+// ⚡ Bolt Performance Optimization: Hoisted static array out of component to prevent reallocation on every render.
 import abacusfirst from "../assets/abcusfirst.jpg";
 import abacussecond from "../assets/abacus_at_school.jpg";
 import vedicCourse from "../assets/vedic_course.jpg";
@@ -5,25 +6,25 @@ import handwriting from "../assets/handwriting_course.jpg";
 import montessori from "../assets/Montessori_course.jpg";
 import phonic from "../assets/phonic_course.jpg";
 
+const courses = [
+  { name: "Abacus", icon: "➡️" },
+  { name: "Abacus At School", icon: "➡️" },
+  { name: "Vedic Math", icon: "➡️" },
+  { name: "Hand Writing", icon: "➡️" },
+  { name: "Montessori", icon: "➡️" },
+  { name: "Phonic", icon: "➡️" },
+];
+
+const courseImages = [
+  abacusfirst,
+  abacussecond,
+  vedicCourse,
+  handwriting,
+  montessori,
+  phonic,
+];
+
 const CourseSection = () => {
-  const courses = [
-    { name: "Abacus", icon: "➡️" },
-    { name: "Abacus At School", icon: "➡️" },
-    { name: "Vedic Math", icon: "➡️" },
-    { name: "Hand Writing", icon: "➡️" },
-    { name: "Montessori", icon: "➡️" },
-    { name: "Phonic", icon: "➡️" },
-  ];
-
-  const courseImages = [
-    abacusfirst,
-    abacussecond,
-    vedicCourse,
-    handwriting,
-    montessori,
-    phonic,
-  ];
-
   return (
     <section className="py-12 px-6 bg-gray-100">
       <div className="container mx-auto">
