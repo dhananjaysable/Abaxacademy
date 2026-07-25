@@ -1,0 +1,3 @@
+## 2024-07-25 - ARIA labels and styles for Icon-Only Buttons
+**Learning:** Applying interactive styles (like `hover:`, `cursor-pointer`, `p-3`, `rounded-full`) to a non-interactive parent `<div>` around a semantic `<button>` creates an inaccessible focus target for keyboard users and prevents proper screen reader announcements, especially when the button only contains an icon and lacks an `aria-label`.
+**Action:** Always refactor icon-only buttons by removing the interactive styling from the parent `<div>`, moving the classes directly onto the `<button>` element, adding explicit `focus-visible:ring-*` styles for keyboard navigation, and including a descriptive `aria-label`.
