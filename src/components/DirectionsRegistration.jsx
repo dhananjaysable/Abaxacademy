@@ -17,6 +17,7 @@ const DirectionsRegistration = () => {
             </h3>
             <div className="relative">
               <div className="w-full h-64 sm:h-80 md:h-[400px] lg:h-[500px]">
+                {/* Sentinel: Added sandbox and title attributes to iframe for security and accessibility */}
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7443.435069325953!2d79.1329382321892!3d21.123824630147176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c75e15711bbf%3A0x9455d6b5417e150b!2sABAX%20ACADEMY!5e0!3m2!1sen!2sin!4v1742811739745!5m2!1sen!2sin"
                   width="100%"
@@ -25,6 +26,8 @@ const DirectionsRegistration = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-lg"
+                  sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+                  title="Google Maps Location for ABAX ACADEMY"
                 ></iframe>
               </div>
               <div className="absolute bottom-0 left-0 bg-blue-400 p-4 text-white text-sm w-full md:w-3/4 rounded-tr-md">
