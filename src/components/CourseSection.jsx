@@ -38,10 +38,12 @@ const CourseSection = () => {
               className="text-center cursor-pointer bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition duration-300"
             >
               <div className="mb-4">
+                {/* ⚡ Bolt: Lazy load images below the fold to improve initial page load speed */}
                 <img
                   src={courseImages[index]}
                   alt={course.name}
                   className="w-full h-32 object-cover rounded-md"
+                  loading="lazy"
                 />
               </div>
               <p className="text-sm font-medium">{course.name}</p>
