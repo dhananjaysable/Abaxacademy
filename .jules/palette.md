@@ -1,0 +1,3 @@
+## 2025-07-26 - [Carousel Keyboard Accessibility Enhancement]
+**Learning:** Carousels often lack focus indicators and semantic labels for navigation controls (like previous/next icons and pagination dots), creating a complete barrier for keyboard users and screen readers navigating past the visual layer. Removing `focus:outline-none` and leaving it unhandled makes keyboard navigation impossible to track.
+**Action:** When implementing custom interactive elements like carousels, always replace `focus:outline-none` with explicit, semantic focus styles (e.g., `focus-visible:ring-2`) and assign descriptive `aria-label` attributes to ensure the component is discoverable and operable via keyboard or assistive technologies.
