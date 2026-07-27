@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility issue with icon-only buttons
+**Learning:** Icon-only buttons frequently lack `aria-label`s and have interactive styles (like hover effects and transition duration) applied to non-interactive parent `<div>` wrappers rather than the semantic `<button>` elements. This breaks keyboard navigation and accessibility.
+**Action:** Always refactor these by moving interactive styles directly to the `<button>`, adding `focus-visible` ring styles, and including descriptive `aria-label`s.
