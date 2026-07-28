@@ -1,0 +1,3 @@
+## 2025-02-23 - Interactive Element Wrappers
+**Learning:** This app uses non-semantic `<div>` wrappers around `<button>` elements for social links, applying hover effects and cursor styles to the wrapper instead of the button itself. This breaks keyboard accessibility because the button itself has no focus ring or context (missing `aria-label`).
+**Action:** Always refactor these structures by removing the outer div, applying padding/hover/focus classes directly to the `<button>`, explicitly adding `focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none`, and providing semantic `aria-label`s.
