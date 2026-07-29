@@ -12,23 +12,35 @@ const Header = () => {
 
 
       <div className="flex space-x-3">
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
+        <div className="flex items-center justify-center">
+          <button
+            aria-label="Visit our Facebook page"
+            className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+          >
             <FaFacebook className="w-6 h-6 cursor-pointer" />
           </button>
         </div>
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
+        <div className="flex items-center justify-center">
+          <button
+            aria-label="Visit our Twitter page"
+            className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+          >
             <BsTwitter className="cursor-pointer w-6 h-6" />
           </button>
         </div>
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
+        <div className="flex items-center justify-center">
+          <button
+            aria-label="Visit our Instagram page"
+            className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+          >
             <BsInstagram className="w-6 h-6 cursor-pointer" />
           </button>
         </div>
-        <div className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 flex items-center justify-center">
-          <button>
+        <div className="flex items-center justify-center">
+          <button
+            aria-label="Visit our LinkedIn page"
+            className="p-3 cursor-pointer rounded-full hover:bg-gray-700 transition duration-300 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+          >
             <LiaLinkedinIn className="w-7 h-7 text-white fill-current cursor-pointer" />
           </button>
         </div>
