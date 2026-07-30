@@ -1,0 +1,3 @@
+## 2024-07-30 - Interactive Styles on Wrapper Elements Hinders Accessibility
+**Learning:** In this application, interactive styles (like padding, background hover effects, transitions) on icon-only buttons are frequently applied to non-interactive parent `<div>` wrappers instead of the semantic `<button>` elements. This prevents keyboard users from seeing visual focus states or accessing the intended interaction styles when tabbing through the interface.
+**Action:** Always refactor these structures by moving the interactive padding and hover classes directly onto the `<button>` element. Additionally, ensure `focus-visible` styles and descriptive `aria-label` attributes are added to the `<button>` to restore full keyboard accessibility and screen reader support.
