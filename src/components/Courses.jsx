@@ -1,13 +1,14 @@
+// Hoisted static array to prevent unnecessary memory allocation on re-renders
+const courses = [
+  "Alguns",
+  "About Al",
+  "Voice Math",
+  "Hand Writing",
+  "Monteesoft",
+  "Phonic"
+];
+
 export default function Courses() {
-    const courses = [
-      "Alguns",
-      "About Al",
-      "Voice Math",
-      "Hand Writing",
-      "Monteesoft",
-      "Phonic"
-    ];
-  
     return (
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
