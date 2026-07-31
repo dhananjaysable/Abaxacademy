@@ -49,6 +49,8 @@ const DirectionsRegistration = () => {
                   type="text"
                   placeholder="Name"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  maxLength="50"
                 />
               </div>
               <div>
@@ -56,6 +58,8 @@ const DirectionsRegistration = () => {
                   type="email"
                   placeholder="Email"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  maxLength="50"
                 />
               </div>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
@@ -63,15 +67,19 @@ const DirectionsRegistration = () => {
                   type="text"
                   placeholder="City"
                   className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  maxLength="50"
                 />
                 <input
                   type="text"
                   placeholder="State"
                   className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  maxLength="50"
                 />
               </div>
               <div>
-                <select className="w-full p-2 rounded text-gray-800 bg-gray-100">
+                <select className="w-full p-2 rounded text-gray-800 bg-gray-100" required>
                   <option value="">Status</option>
                   <option value="student">Student</option>
                   <option value="parent">Parent</option>
@@ -80,9 +88,12 @@ const DirectionsRegistration = () => {
               </div>
               <div>
                 <input
-                  type="text"
+                  type="tel"
                   placeholder="Mobile No"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  pattern="[0-9]{10}"
+                  maxLength="10"
                 />
               </div>
               <div className="w-full">
