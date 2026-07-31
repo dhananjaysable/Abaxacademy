@@ -1,0 +1,3 @@
+## 2024-07-31 - [Add interactive styles directly to `<button>` elements for keyboard accessibility]
+**Learning:** This application has a pattern where interactive styles (like `hover:bg-gray-700`) and flex layouts for icon-only buttons are applied to non-interactive parent `<div>` wrappers instead of the semantic `<button>` elements themselves. This removes the focus indication from the button making it non-accessible.
+**Action:** When working on icon-only buttons, always ensure that the interactive styles are moved to the `<button>` element directly. Add `focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none` for focus indication, and provide descriptive `aria-label` attributes so the icon-only buttons are accessible.
