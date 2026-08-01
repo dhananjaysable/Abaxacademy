@@ -1,19 +1,20 @@
 import { Check } from "lucide-react";
 import benefitsImage from "../assets/bg2.jpg";
 
-const Benefits = () => {
-  const benefits = [
-    "Students develop a great sense towards numbers",
-    "This increases their speed",
-    "Memory is enhanced remarkably",
-    "Activates right brain & trains to face competition",
-    "Increases comprehension & imagination",
-    "Endurance, learning & writing skills",
-    "Boosts their memory power",
-    "Promotes concentration of children",
-    "Enhances mathematical logic",
-  ];
+// Performance optimization: Hoisted static array to module scope to prevent unnecessary memory allocation and re-renders
+const benefits = [
+  "Students develop a great sense towards numbers",
+  "This increases their speed",
+  "Memory is enhanced remarkably",
+  "Activates right brain & trains to face competition",
+  "Increases comprehension & imagination",
+  "Endurance, learning & writing skills",
+  "Boosts their memory power",
+  "Promotes concentration of children",
+  "Enhances mathematical logic",
+];
 
+const Benefits = () => {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-center">
