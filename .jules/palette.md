@@ -1,0 +1,3 @@
+## 2025-02-27 - Interactive Styles on Non-Semantic Wrappers
+**Learning:** Found a pattern where interactive styles (hover effects, padding, cursor-pointer) are applied to non-semantic parent `<div>` wrappers instead of the actual `<button>` elements, particularly for icon-only buttons like social media links. This breaks accessibility as focus states are missed, and screen readers lack context due to missing `aria-label`s.
+**Action:** Always move interactive styles (`hover:`, `focus-visible:`, padding) directly onto semantic `<button>` elements, add explicit keyboard focus indicators (`focus-visible:ring-2`), and ensure descriptive `aria-label`s are present for icon-only buttons.
