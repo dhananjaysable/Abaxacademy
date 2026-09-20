@@ -5,15 +5,16 @@ import certificate4 from "../assets/Certificate3.jpg";
 import certificate5 from "../assets/Certificate4.jpg";
 import certificate6 from "../assets/udyam registration.png";
 
+const certificates = [
+  certificate1,
+  certificate2,
+  certificate3,
+  certificate4,
+  certificate5,
+  certificate6,
+];
+
 const CertificateSection = () => {
-  const certificates = [
-    certificate1,
-    certificate2,
-    certificate3,
-    certificate4,
-    certificate5,
-    certificate6,
-  ];
   return (
     <section className="py-12 px-6">
       <div className="container mx-auto">
@@ -22,14 +23,14 @@ const CertificateSection = () => {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-6">
-          {[1, 2, 3, 4,5,6].map((item) => (
+          {certificates.map((cert, index) => (
             <div
-              key={item}
+              key={index + 1}
               className="border border-red-200 rounded p-2 shadow-sm flex justify-center hover:shadow-md transition-shadow"
             >
               <img
-                src={certificates[item - 1]}
-                alt={`Certificate sample ${item}`}
+                src={cert}
+                alt={`Certificate sample ${index + 1}`}
                 className="h-48 w-full object-contain"
               />
             </div>
