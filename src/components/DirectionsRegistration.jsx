@@ -2,8 +2,40 @@ import { Cookie, Phone } from "lucide-react";
 import bg from "../assets/bg3.jpg";
 import { TbAirConditioning, TbLocationFilled } from "react-icons/tb";
 import { MdEmail } from "react-icons/md";
+import { useState } from "react";
 
 const DirectionsRegistration = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    city: "",
+    state: "",
+    status: "",
+    mobileNo: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        console.log("Form submitted successfully");
+      }
+    } catch (error) {
+      console.error("Submission failed", error);
+    }
+  };
   return (
     <section
       className="py-12 px-6 bg-gray-700 text-white bg-cover bg-center bg-no-repeat"
@@ -43,35 +75,81 @@ const DirectionsRegistration = () => {
               Registration <span className="font-normal">Form</span>
             </h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-1">
+                  Name <span className="text-red-500">*</span>
+                </label>
                 <input
+                  id="name"
+                  name="name"
                   type="text"
                   placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
               <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-1">
+                  Email <span className="text-red-500">*</span>
+                </label>
                 <input
+                  id="email"
+                  name="email"
                   type="email"
                   placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-                <input
-                  type="text"
-                  placeholder="City"
-                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
-                />
-                <input
-                  type="text"
-                  placeholder="State"
-                  className="w-full sm:w-1/2 p-2 rounded text-gray-800 bg-gray-100"
-                />
+                <div className="w-full sm:w-1/2">
+                  <label htmlFor="city" className="block text-sm font-medium mb-1">
+                    City <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="city"
+                    name="city"
+                    type="text"
+                    placeholder="City"
+                    value={formData.city}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  />
+                </div>
+                <div className="w-full sm:w-1/2">
+                  <label htmlFor="state" className="block text-sm font-medium mb-1">
+                    State <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    id="state"
+                    name="state"
+                    type="text"
+                    placeholder="State"
+                    value={formData.state}
+                    onChange={handleChange}
+                    required
+                    className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  />
+                </div>
               </div>
               <div>
-                <select className="w-full p-2 rounded text-gray-800 bg-gray-100">
+                <label htmlFor="status" className="block text-sm font-medium mb-1">
+                  Status <span className="text-red-500">*</span>
+                </label>
+                <select
+                  id="status"
+                  name="status"
+                  value={formData.status}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                >
                   <option value="">Status</option>
                   <option value="student">Student</option>
                   <option value="parent">Parent</option>
@@ -79,9 +157,19 @@ const DirectionsRegistration = () => {
                 </select>
               </div>
               <div>
+                <label htmlFor="mobileNo" className="block text-sm font-medium mb-1">
+                  Mobile No <span className="text-red-500">*</span>
+                </label>
                 <input
-                  type="text"
+                  id="mobileNo"
+                  name="mobileNo"
+                  type="tel"
+                  pattern="[0-9]{10}"
+                  maxLength="10"
                   placeholder="Mobile No"
+                  value={formData.mobileNo}
+                  onChange={handleChange}
+                  required
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
                 />
               </div>
