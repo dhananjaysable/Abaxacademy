@@ -45,10 +45,13 @@ const DirectionsRegistration = () => {
 
             <form className="space-y-4">
               <div>
+                {/* Security fix: Added required and maxLength attributes to prevent empty input and potential buffer/database overflow */}
                 <input
                   type="text"
                   placeholder="Name"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  maxLength={50}
                 />
               </div>
               <div>
