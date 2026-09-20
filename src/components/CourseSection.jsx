@@ -5,24 +5,25 @@ import handwriting from "../assets/handwriting_course.jpg";
 import montessori from "../assets/Montessori_course.jpg";
 import phonic from "../assets/phonic_course.jpg";
 
-const CourseSection = () => {
-  const courses = [
-    { name: "Abacus", icon: "➡️" },
-    { name: "Abacus At School", icon: "➡️" },
-    { name: "Vedic Math", icon: "➡️" },
-    { name: "Hand Writing", icon: "➡️" },
-    { name: "Montessori", icon: "➡️" },
-    { name: "Phonic", icon: "➡️" },
-  ];
+const courses = [
+  { name: "Abacus", icon: "➡️" },
+  { name: "Abacus At School", icon: "➡️" },
+  { name: "Vedic Math", icon: "➡️" },
+  { name: "Hand Writing", icon: "➡️" },
+  { name: "Montessori", icon: "➡️" },
+  { name: "Phonic", icon: "➡️" },
+];
 
-  const courseImages = [
-    abacusfirst,
-    abacussecond,
-    vedicCourse,
-    handwriting,
-    montessori,
-    phonic,
-  ];
+const courseImages = [
+  abacusfirst,
+  abacussecond,
+  vedicCourse,
+  handwriting,
+  montessori,
+  phonic,
+];
+
+const CourseSection = () => {
 
   return (
     <section className="py-12 px-6 bg-gray-100">
