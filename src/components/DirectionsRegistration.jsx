@@ -49,6 +49,8 @@ const DirectionsRegistration = () => {
                   type="text"
                   placeholder="Name"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  required
+                  maxLength={50}
                 />
               </div>
               <div>
