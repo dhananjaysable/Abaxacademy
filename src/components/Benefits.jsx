@@ -1,19 +1,25 @@
 import { Check } from "lucide-react";
 import benefitsImage from "../assets/bg2.jpg";
 
-const Benefits = () => {
-  const benefits = [
-    "Students develop a great sense towards numbers",
-    "This increases their speed",
-    "Memory is enhanced remarkably",
-    "Activates right brain & trains to face competition",
-    "Increases comprehension & imagination",
-    "Endurance, learning & writing skills",
-    "Boosts their memory power",
-    "Promotes concentration of children",
-    "Enhances mathematical logic",
-  ];
+const benefits = [
+  "Students develop a great sense towards numbers",
+  "This increases their speed",
+  "Memory is enhanced remarkably",
+  "Activates right brain & trains to face competition",
+  "Increases comprehension & imagination",
+  "Endurance, learning & writing skills",
+  "Boosts their memory power",
+  "Promotes concentration of children",
+  "Enhances mathematical logic",
+];
 
+const stats = [
+  { value: "600+", label: "Teachers" },
+  { value: "2Lakh+", label: "Students" },
+  { value: "80+", label: "Courses" },
+];
+
+const Benefits = () => {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-center">
@@ -44,24 +50,14 @@ const Benefits = () => {
           }}
         >
           <div className="flex items-center justify-center gap-8 flex-wrap text-center text-4xl p-4 rounded-lg">
-            <div className="flex flex-col items-center justify-center gap-2">
-              <h1 className="text-blue-400 font-bold">600+</h1>
-              <span className="font-semibold text-lg tracking-widest">
-                Teachers
-              </span>
-            </div>
-            <div className="flex flex-col items-center justify-center gap-2">
-              <h1 className="text-blue-400 font-bold">2Lakh+</h1>
-              <span className="font-semibold text-lg tracking-widest">
-                Students
-              </span>
-            </div>
-            <div className="flex flex-col items-center justify-center gap-2">
-              <h1 className="text-blue-400 font-bold">80+</h1>
-              <span className="font-semibold text-lg tracking-widest">
-                Courses
-              </span>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="flex flex-col items-center justify-center gap-2">
+                <h1 className="text-blue-400 font-bold">{stat.value}</h1>
+                <span className="font-semibold text-lg tracking-widest">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
