@@ -9,64 +9,65 @@ import i2 from "../assets/i2.jpg";
 import i3 from "../assets/i3.jpg";
 import leftbrain from "../assets/leftbrain.jpg";
 
-const WhatWeDo = () => {
-  const carouselItems = [
-    {
-      id: 1,
-      image: eduactivities,
-      title: "Welcome to ABAX ACADEMY",
-      description: "An Educational Abacus Learning Centre for Growing Children",
-    },
-    {
-      id: 2,
-      image: visualization,
-      title: "Develop Skills That Last a Lifetime",
-      description:
-        "Our proven methodology helps children excel in mathematics and beyond",
-    },
-    {
-      id: 3,
-      image: i2,
-      title: "Join Our Learning Community",
-      description: "Experience the joy of learning in a supportive environment",
-    },
-    {
-      id: 4,
-      image: creativity,
-      title: "Innovative Learning Techniques",
-      description:
-        "We use creative methods to make learning fun and engaging for children",
-    },
-    {
-      id: 5,
-      image: selfconfidence,
-      title: "Boost Confidence and Focus",
-      description:
-        "Our programs are designed to enhance children's confidence and concentration",
-    },
-    {
-      id: 6,
-      image: memory,
-      title: "Personalized Attention",
-      description:
-        "We ensure every child gets the attention they need to thrive",
-    },
-    {
-      id: 7,
-      image: i3,
-      title: "Building a Strong Foundation",
-      description:
-        "Prepare your child for academic success with our structured programs",
-    },
-    {
-      id: 8,
-      image: leftbrain,
-      title: "Interactive Learning Environment",
-      description:
-        "Children learn best in an environment that encourages interaction and curiosity",
-    },
-  ];
+// Moved static array outside component to prevent recreation on every render
+const carouselItems = [
+  {
+    id: 1,
+    image: eduactivities,
+    title: "Welcome to ABAX ACADEMY",
+    description: "An Educational Abacus Learning Centre for Growing Children",
+  },
+  {
+    id: 2,
+    image: visualization,
+    title: "Develop Skills That Last a Lifetime",
+    description:
+      "Our proven methodology helps children excel in mathematics and beyond",
+  },
+  {
+    id: 3,
+    image: i2,
+    title: "Join Our Learning Community",
+    description: "Experience the joy of learning in a supportive environment",
+  },
+  {
+    id: 4,
+    image: creativity,
+    title: "Innovative Learning Techniques",
+    description:
+      "We use creative methods to make learning fun and engaging for children",
+  },
+  {
+    id: 5,
+    image: selfconfidence,
+    title: "Boost Confidence and Focus",
+    description:
+      "Our programs are designed to enhance children's confidence and concentration",
+  },
+  {
+    id: 6,
+    image: memory,
+    title: "Personalized Attention",
+    description:
+      "We ensure every child gets the attention they need to thrive",
+  },
+  {
+    id: 7,
+    image: i3,
+    title: "Building a Strong Foundation",
+    description:
+      "Prepare your child for academic success with our structured programs",
+  },
+  {
+    id: 8,
+    image: leftbrain,
+    title: "Interactive Learning Environment",
+    description:
+      "Children learn best in an environment that encourages interaction and curiosity",
+  },
+];
 
+const WhatWeDo = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -77,7 +78,7 @@ const WhatWeDo = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [carouselItems.length]);
+  }, []);
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
