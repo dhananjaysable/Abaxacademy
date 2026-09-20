@@ -56,6 +56,7 @@ const DirectionsRegistration = () => {
                   type="email"
                   placeholder="Email"
                   className="w-full p-2 rounded text-gray-800 bg-gray-100"
+                  required
                 />
               </div>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
